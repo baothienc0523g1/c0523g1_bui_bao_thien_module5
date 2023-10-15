@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Furama Management</title>
+
+    <!--    Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--    Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200&family=Pacifico&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <!--    Icon-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+
+    <!--    CSS-->
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+<!--Header start-->
+<div class="header">
+    <div class="col-lg-8 col-md-8 left-header">
+        <div class="email-header">
+            <i class="fa fa-envelope" style="color: #f35525"></i>
+            noimandembuongxuong@gmail.com
+        </div>
+        <div class="address-header">
+            <i class="fa fa-map" style="color:#f35525;"></i>
+            280 Tran Hung Dao str, Da Nang, Viet Nam
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-4 right-header">
+
+    </div>
+</div>
+<!--Header end-->
+
+<!--Navbar start-->
+<div id="navbar" class="container-fluid" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Home Page</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="vertical-line"></div>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Link 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link 3</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">“We need a six month vacation, twice a year.”</span>
+                <button class="sign-in-btn">Sign in</button>
+            </div>
+        </div>
+    </nav>
+</div>
+<!--Navbar end-->
+
+<!--Content start-->
+<div class="container" style="height: 650px">
+    <h3 class="management-title mt-3">Management</h3>
+    <table class="table mt-3">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Link</th>
+            <th>Link</th>
+            <th>Link</th>
+            <th colspan="2" style="text-align: center">Link</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Link</td>
+            <td>Link</td>
+            <td>Link</td>
+            <td>Link</td>
+            <td style="text-align: center"><i class="fas fa-edit fa-lg"></i></td>
+            <td style="text-align: center"><a type="button" data-bs-toggle="modal"
+                                              data-bs-target="#deleteModal"><i class="fas fa-trash fa-lg"></i></a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--Content end-->
+
+<!--Scroll to top button start-->
+<button onclick="topFunction()" id="scrollToTop" title="Go to top">
+    <i class="fas fa-arrow-up fa-lg"></i>
+</button>
+<!--Scroll to top button end-->
+
+<!--Info modal start-->
+<div class="modal fade" id="infoModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="infoModalDropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="infoModalDropLabel" style="font-weight: bold">Villa Information</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate minus nesciunt non praesentium
+                quasi ratione repellat reprehenderit sapiente veritatis. Ex fugiat modi molestiae mollitia unde.
+                Alias dolorem eligendi officiis placeat.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Info modal end-->
+
+<!--Delete modal start-->
+<div class="modal fade" id="deleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="deleteModalDropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteModalDropLabel" style="font-weight: bold; color: red">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Remove Facility</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <strong>
+                    Are you sure to remove list item with name: <span></span>
+                </strong>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Delete modal end-->
+
+<!--Footer start-->
+<footer class="text-center text-white" style="background-color: #202228;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/5qua.chuoi9"
+               target="_blank" role="button"
+               data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/donefor.thien/"
+               target="_blank" role="button"
+               data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+            <!-- Github -->
+            <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/baothienc0523g1/"
+               target="_blank" role="button"
+               data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+        </section>
+        <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p style="color:white;">
+            © 2023 Copyright
+            <a href="https://codegym.vn/" target="_blank" style="text-decoration: none">Codegym.com</a>
+        </p>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!--Footer end-->
+
+
+<!--JS library-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+<!--JS scroll to top start-->
+<script>
+    // Get the button:
+    let scrollToTop = document.getElementById("scrollToTop");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTop.style.display = "block";
+        } else {
+            scrollToTop.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+<!--JS scroll to top end-->
+</body>
+</html>
