@@ -1,0 +1,163 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+
+/*header*/
+.header {
+    height: 30px;
+    /*background-color: beige;*/
+    font-family: 'Nunito Sans', sans-serif;
+    display: flex;
+    flex-direction: row;
+    background-color: #ebeff4;
+}
+
+.left-header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 4px;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.email-header {
+    padding-left: 5%;
+    padding-right: 2%;
+}
+
+.right-header {
+    padding-top: 4px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 15%;
+}
+
+.facebook-header {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/*nav*/
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 5%;
+}
+.nav-link {
+    font-weight: bold;
+}
+.navbar-text {
+    font-style: italic;
+    margin-right: 5%;
+}
+
+/*text resposive*/
+
+.furama-text-responsive {
+    display: none;
+}
+
+/*responsive banner*/
+@media only screen and (max-width: 954px) {
+    .furama-text {
+        display: none;
+    }
+
+    .furama-text-responsive {
+        display: block;
+        font-size: 6rem;
+        font-family: 'Pacifico', cursive;
+    }
+
+    .header {
+        display: none;
+    }
+    .navbar-text {
+        display: none;
+    }
+}
+
+/*banner*/
+.banner {
+    background-image: url('/banner.jpg');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 300px;
+    display: grid;
+    /*background-color: wheat;*/
+}
+
+.banner-text {
+    place-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.furama-text {
+    color: #202228;
+    padding-right: 1rem;
+    font-size: 6rem;
+    font-family: 'Pacifico', cursive;
+}
+
+
+
+/*card*/
+.card {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;}
+
+.card:hover {
+    cursor: pointer;
+}
+.card-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.card-btn div button {
+    width: 90%;
+}
+
+/*back to top button*/
+#scrollToTop {
+    position: fixed;
+    transition: .7s;
+    left: 96%;
+    bottom: 5%;
+    border: 1px solid #f19c16;
+    color: #f19c16;
+    background-color: white;
+    width: 3%;
+    height: auto;
+}
+#scrollToTop:hover {
+    color:  white;
+    background-color: #f19c16;
+}
+
+/*footer*/
+footer i {
+    color: white
+}
+
+/*description*/
+#description {
+    font-family: Tahoma;
+    font-size: 1rem;
+}
+
+/*signin button*/
+.sign-in-btn {
+    border: 1px solid #f19c16;
+    color: #f19c16;
+    background-color: white;
+    transition: .7s;
+    border-radius: 5px;
+    width: 15%;
+}
+.sign-in-btn:hover {
+    background-color: #f19c16;
+    color: white;
+}
