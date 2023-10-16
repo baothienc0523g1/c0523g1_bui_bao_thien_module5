@@ -1,0 +1,38 @@
+table {
+  color: #202563;
+  margin: 10% auto 0 auto;
+  width: 40%;
+  height: 30%;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+tr, td, th {
+  place-self: center;
+  width: 100%;
+}
+input {
+  width: 70%;
+  height: 2rem;
+  border-radius: 5px;
+}
+.btn {
+  width: 35%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  height: 2rem;
+  border-radius: 10px;
+}
+input:focus {
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+#submit-btn {
+  background-color: white;
+  color: #202563;
+  transition: .5s;
+}
+#submit-btn:hover {
+  background-color: #202563;
+  color: white;
+}
