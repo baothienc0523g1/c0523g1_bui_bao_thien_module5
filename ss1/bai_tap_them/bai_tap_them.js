@@ -59,7 +59,7 @@ console.log(chosenPerson);
 
 
 let personFn = (obj) => {
-    let {firstName = "Quân", education: {degree} = "N/A"} = obj;
+    const {firstName = "Quân", education: {degree} = "N/A"} = obj;
     console.log(firstName, degree);
 }
 
