@@ -16,6 +16,7 @@ class Todo extends Component {
 
     handleAddItem = () => {
         if (this.state.item) {
+            //line này sẽ setState -> set 1 đối tượng, chú ý cú pháp set đối tượng
             this.setState({
                 ...this.state,
                 list: [...this.state.list, this.state.item]
