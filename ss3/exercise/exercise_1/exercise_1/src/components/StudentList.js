@@ -20,8 +20,7 @@ let studentList = [student1, student2, student3, student4, student5];
 function StudentList() {
     return (
         studentList.map((student) =>
-            <tr>
-                <td>{student.id}</td>
+            <tr key={student.id}>
                 <td>{student.name}</td>
                 <td>{student.age}</td>
                 <td>{student.address}</td>
