@@ -25,7 +25,7 @@
     padding-top: 4px;
     font-size: 10pt;
     font-weight: bold;
-    padding-left: 3.5% ;
+    padding-left: 3.5%;
 }
 
 .email-header {
@@ -195,6 +195,12 @@ footer i {
 }
 
 /*add*/
-table tr td {
-    padding-top: 3%;
+tr td {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#add-form-table {
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px 3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
