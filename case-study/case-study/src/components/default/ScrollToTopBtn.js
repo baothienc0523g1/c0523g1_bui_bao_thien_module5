@@ -5,3 +5,4 @@ function ScrollToToBtn() {
         </button>
     )
 }
+export default ScrollToToBtn;

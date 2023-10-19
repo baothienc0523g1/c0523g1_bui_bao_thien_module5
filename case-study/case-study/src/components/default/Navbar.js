@@ -1,6 +1,6 @@
 function Navbar() {
     return (
-        <div id="navbar" className="container-fluid" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+        <div id="navbar" className="container-fluid" style={{boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">Home Page</a>

@@ -1,12 +1,13 @@
-import useIncrement from "../hooks/useIncrement";
+import {useState} from "react";
 
 function CounterComponent() {
-    const [countOne, setCountOne] = useIncrement(0);
-    const [countTwo, setCountTwo] = useIncrement(0);
+    const [countOne, setCountOne] = useState(0);
+    const [countTwo, setCountTwo] = useState(0);
 
     function handleCountOne() {
         setCountOne((prvValue) => prvValue + 1);
     }
+
     function handleCountTwo() {
         setCountTwo((prvValue) => prvValue + 2);
     }

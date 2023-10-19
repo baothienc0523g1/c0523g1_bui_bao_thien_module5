@@ -1,13 +1,13 @@
 function Iframe() {
     return (
-        <!--Iframe start-->
-        <div class="container mt-4">
+
+        <div className="container mt-4">
             <hr/>
-            <div class="row">
-                <div class="col-lg-6" data-wow-delay="0.1s">
-                    <p style="font-size: 5rem">Come as guests. Leave as family.</p>
+            <div className="row">
+                <div className="col-lg-6" data-wow-delay="0.1s">
+                    <p style={{fontSize: "5rem"}}>Come as guests. Leave as family.</p>
                 </div>
-                <div class="col-lg-6" id="description">
+                <div className="col-lg-6" id="description">
                     Welcome to our luxurious villa rental experience, where dreams come true.
                     Nestled in the heart of paradise, our exquisite villas offer a perfect blend of elegance and
                     comfort.
@@ -27,7 +27,7 @@ function Iframe() {
             </div>
             <hr/>
         </div>
-        <!--Iframe end-->
+
     )
 }
 export default Iframe;
