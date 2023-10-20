@@ -1,9 +1,9 @@
 'use strict';
 import React, {Component} from "react";
 
-class Todo extends Component {
-    constructor(props) {
-        super(props);
+class Todo extends Component{
+    constructor() {
+        super();
         this.state = {
             list: [],
             item: "",

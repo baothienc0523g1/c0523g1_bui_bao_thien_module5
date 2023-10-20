@@ -1,7 +1,7 @@
 'use strict';
 import {Component} from "react";
 import StudentList from "./StudentList";
-class Table extends Component {
+class MyTable extends Component {
     render() {
         return (
             <div>
@@ -23,4 +23,4 @@ class Table extends Component {
     }
 }
 
-export default Table;
+export default MyTable;
