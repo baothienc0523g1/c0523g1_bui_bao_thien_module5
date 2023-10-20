@@ -23,7 +23,7 @@ function Footer() {
             <div className="text-center text-dark p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
                 <p style={{color: "white"}}>
                     © 2023 Copyright
-                    <a href="https://codegym.vn/" target="_blank" style={{textDecoration: "none"}}>Codegym.com</a>
+                    <a href="https://codegym.vn/" target="_blank" style={{textDecoration: "none"}}> Codegym.com</a>
                 </p>
             </div>
         </footer>

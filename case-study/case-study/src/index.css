@@ -188,6 +188,7 @@ footer i {
 /*management page*/
 .management-title {
   text-align: center;
+  margin-bottom: 2%;
 }
 
 .fas {
@@ -198,3 +199,9 @@ footer i {
 table tr td {
   padding-top: 3%;
 }
+
+/*my table list*/
+#customer-table, #employee-table {
+  width: 100%;
+}
+

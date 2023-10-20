@@ -16,8 +16,7 @@ function ItemCard() {
                             </button>
                         </div>
                         <div>
-                            <button className="btn btn-outline-primary" type="button" data-bs-toggle="modal"
-                                    data-bs-target="#deleteModal">Rent
+                            <button className="btn btn-outline-primary">Rent
                             </button>
                         </div>
                     </div>
