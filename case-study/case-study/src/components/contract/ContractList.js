@@ -2,7 +2,7 @@ import * as contractService from "../../service/contractService";
 
 export function ContractList() {
     return (
-        <div className="container">
+        <div className="container management-div">
             <h1 className="management-title">Contract List</h1>
             <table className="table table-striped mt-2" id="customer-table">
                 <thead>

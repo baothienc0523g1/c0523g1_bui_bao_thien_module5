@@ -5,7 +5,7 @@ function Navbar() {
         <div id="navbar" className="container-fluid" style={{boxShadow: "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}}>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Home Page</a>
+                    <Link className="navbar-brand" to="/">Home Page</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarText"
                             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,10 +21,10 @@ function Navbar() {
                                 <Link className="nav-link" to="/employees">Employee</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Facility</a>
+                                <Link className="nav-link" to="/facilites">Facility</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contract</a>
+                                <Link className="nav-link" to="/contracts">Contract</Link>
                             </li>
                         </ul>
                         <span className="navbar-text">“We need a six month vacation, twice a year.”</span>

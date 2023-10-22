@@ -3,6 +3,15 @@
   box-sizing: border-box;
 }
 
+.sign-up-link {
+  text-decoration: none;
+  color: orange;
+}
+
+.sign-up-link:hover {
+  color: white;
+}
+
 /*vertical line*/
 .vertical-line {
   width: 1px;
@@ -203,5 +212,26 @@ table tr td {
 /*my table list*/
 #customer-table, #employee-table {
   width: 100%;
+}
+.management-div {
+  min-height: 600px;
+}
+
+/*customer add form*/
+#customer-add-form {
+  width: 60%;
+  text-align: center;
+}
+
+#customer-add-form label {
+  font-weight: bold;
+}
+
+.form-err-msg {
+  color: red;
+}
+
+.required {
+  color: red;
 }
 

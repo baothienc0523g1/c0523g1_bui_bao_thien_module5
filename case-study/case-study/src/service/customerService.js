@@ -5,6 +5,13 @@ export function findAll() {
     return customerList;
 }
 
+export function addCustomer() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [customer, setCustomer] = useState({});
+
+
+}
+
 const customer1 = new Customer(1, "Sang Quoc Phan", "1998-01-01",
     "Male", 9875156248, "0902546218",
     "sang@gmail.com", "Gold", "Hue");
