@@ -1,6 +1,6 @@
 import * as villaService from "../../../service/viilaService";
 
-function VillaList() {
+export function VillaList() {
     return (
         <>
             <h1 className="management-title">Villa List</h1>

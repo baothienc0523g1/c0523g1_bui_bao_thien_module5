@@ -11,6 +11,11 @@ import SingUpForm from "./components/core/SignUpForm";
 import CustomerList from "./components/customer/CustomerList";
 import {EmployeeList} from "./components/employee/EmployeeList";
 import {DeleteModal} from "./components/core/DeleteModal";
+import {Route, Routes} from "react-router-dom";
+import {RoomList} from "./components/facility/room/RoomList";
+import {HouseList} from "./components/facility/house/HouseList";
+import {VillaList} from "./components/facility/villa/VillaList";
+import {ContractList} from "./components/contract/ContractList";
 
 function App() {
     return (
@@ -26,11 +31,17 @@ function App() {
                 </div>
                 <SingUpForm/>
                 <hr/>
-                <CustomerList/>
+                <Routes>
+                    <Route path="/customers" element={<CustomerList/>}></Route>
+                </Routes>
                 <hr/>
                 <EmployeeList/>
+                <CustomerList/>
+                <RoomList/>
+                <HouseList/>
+                <VillaList/>
+                <ContractList/>
                 <hr/>
-
             </div>
             <Iframe/>
             <ScrollToTopBtn/>

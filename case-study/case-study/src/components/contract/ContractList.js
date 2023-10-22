@@ -1,9 +1,9 @@
 import * as contractService from "../../service/contractService";
 
-function ContractList() {
+export function ContractList() {
     return (
-        <>
-            <h1 className="management-title">House List</h1>
+        <div className="container">
+            <h1 className="management-title">Contract List</h1>
             <table className="table table-striped mt-2" id="customer-table">
                 <thead>
                 <tr>
@@ -32,7 +32,7 @@ function ContractList() {
                 }
                 </tbody>
             </table>
-        </>
+        </div>
 
     );
 }

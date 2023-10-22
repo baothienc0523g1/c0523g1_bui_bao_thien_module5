@@ -1,6 +1,6 @@
 import * as houseService from "../../../service/houseService.js";
 
-function HouseList() {
+export function HouseList() {
     return (
         <>
             <h1 className="management-title">House List</h1>

@@ -1,6 +1,6 @@
 import * as roomService from "../../../service/roomService";
 
-function RoomList() {
+export function RoomList() {
     return (
         <>
             <h1 className="management-title">Room List</h1>
