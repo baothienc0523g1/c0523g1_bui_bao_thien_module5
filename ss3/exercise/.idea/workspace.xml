@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c8f53be0-e512-4cb0-b8e4-65552b8c308c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/src/class/Customer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/src/class/Customer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/src/class/Employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/src/class/Employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/src/components/list-with-data/CustomerList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/src/components/list-with-data/CustomerList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/src/mock_data/customers.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/src/mock_data/customers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/src/mock_data/employees.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/src/mock_data/employees.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/ss5/src/components/practice/Practice_1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/ss5/src/components/practice/Practice_3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/ss5/src/components/practice/Practice_4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/ss5/src/components/practice/practice_2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/ss5/src/components/practice/practice_4_components/About.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/ss5/src/components/practice/practice_4_components/Contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/ss5/src/components/practice/practice_4_components/Home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/ss5/src/exercise/MedicForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss5/ss5/src/exercise/MedicForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/ss5/src/practice/practice_4/MyForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss5/ss5/src/practice/practice_4/MyForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss5/ss5/src/practice/practice_5/components/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss5/ss5/src/practice/practice_5/components/Product.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2X168TlpLCl1XIbmQHAGEu288pq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/GIT - Bai tap/c0523g1_bui_bao_thien_module5/ss3/exercise",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8f53be0-e512-4cb0-b8e4-65552b8c308c" name="Changes" comment="" />
+      <created>1697784078156</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697784078156</updated>
+      <workItem from="1697784079331" duration="531000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
