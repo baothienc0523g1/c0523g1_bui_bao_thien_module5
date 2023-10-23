@@ -1,4 +1,3 @@
-import {useState} from "react";
 import {Field, Form, Formik} from "formik";
 import * as yup from "yup";
 
@@ -6,12 +5,15 @@ export default function MedicForm() {
     const requiredString = "Vui lòng điền trường này";
     const invalidString = "Dữ liệu nhập vào không hợp lệ";
 
+
     const MyMedicForm = yup.object().shape({
         name: yup.string().required(requiredString),
         identity: yup.string()
             .matches(/^[0-9]{12}$/, invalidString)
             .required(requiredString),
-        birth: yup.string().required(requiredString), //chua validate 1900
+        birth: yup.string()
+            .matches(/^[1][9][\d]{2}\-[\d]{2}\-[\d]{2}$|^[2][0][0,1][\d]{1}\-[\d]{2}\-[\d]{2}$/,"Độ tuổi hơi sai")
+            .required(requiredString), //chua validate 1900
         nation: yup.string().required(requiredString),
         city: yup.string().required(requiredString),
         district: yup.string().required(requiredString),
@@ -55,16 +57,15 @@ export default function MedicForm() {
 
                             <label htmlFor="identity">Số hộ chiếu/CMND </label><br/>
                             <Field type="text" name="identity" id={"identity"}/><br/>
-                            {errors.identity && touched.identity ? (
-                                <div className="error-msg">{errors.identity}</div>) : null}
+                            {errors.identity && touched.identity ? (<div className="error-msg">{errors.identity}</div>) : null}
 
-                            <label htmlFor="birth">Năm seen </label><br/>
+                            <label htmlFor="birth">Năm sinh </label><br/>
                             <Field type="date" name="birth" id={"birth"}/><br/>
                             {errors.birth && touched.birth ? (<div className="error-msg">{errors.birth}</div>) : null}
 
                             <label htmlFor="nation">Quốc tịch</label><br/>
                             <Field type="text" name="nation" id={"nation"}/><br/>
-                            {errors.nation && touched.birth ? (<div className="error-msg">{errors.birth}</div>) : null}
+                            {errors.nation && touched.nation ? (<div className="error-msg">{errors.nation}</div>) : null}
 
                             <label htmlFor="male">Nam</label>
                             <input className="radio-check" type="radio" name="gender" value="nam"/>
@@ -87,13 +88,11 @@ export default function MedicForm() {
 
                             <label htmlFor="district">Quận/huyện </label><br/>
                             <Field type="text" id={"district"} name="district"/><br/>
-                            {errors.district && touched.district ? (
-                                <div className="error-msg">{errors.district}</div>) : null}
+                            {errors.district && touched.district ? (<div className="error-msg">{errors.district}</div>) : null}
 
                             <label htmlFor="address">Phường/xã </label><br/>
                             <Field type="text" id={"address"} name="address"/><br/>
-                            {errors.address && touched.address ? (
-                                <div className="error-msg">{errors.address}</div>) : null}
+                            {errors.address && touched.address ? (<div className="error-msg">{errors.address}</div>) : null}
 
                             <label htmlFor="str">Số nhà, phố, tổ dân phố/thôn/đội </label><br/>
                             <Field type="text" id={"str"} name="str"/><br/>
@@ -122,8 +121,7 @@ export default function MedicForm() {
                             <h3>Trong vòng 14 ngày qua, Anh/Chị có tiếp xúc với?</h3>
                             <Field type="checkBox" className="bhyt"/>Người bệnh hoặc nghi ngờ mắc COVID-19<br/>
                             <Field type="checkBox" className="bhyt"/>Người từ nước có COVID-19<br/>
-                            <Field type="checkBox" className="bhyt"/>Người từ nước có biểu hiện: Sốt, ho, khó thở, viêm
-                            phổi<br/>
+                            <Field type="checkBox" className="bhyt"/>Người từ nước có biểu hiện: Sốt, ho, khó thở, viêm phổi<br/>
 
                             <button type={"submit"}>Xác nhận</button>
                         </Form>}
