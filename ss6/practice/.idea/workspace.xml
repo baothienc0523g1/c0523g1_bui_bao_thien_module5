@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c34b720b-2006-47eb-9f48-81b2b3202b4a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/src/components/core/ItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/src/components/core/ItemCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/src/components/customer/AddCustomerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/src/components/customer/AddCustomerForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case-study/case-study/src/components/facility/FacilitiesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../case-study/case-study/src/components/facility/FacilitiesList.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2X9njJ3kvhBioXfHwFDhPvcPBr1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/GIT - Bai tap/c0523g1_bui_bao_thien_module5/ss6/practice/practice_call_api",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c34b720b-2006-47eb-9f48-81b2b3202b4a" name="Changes" comment="" />
+      <created>1698050297118</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698050297118</updated>
+      <workItem from="1698050298092" duration="157000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

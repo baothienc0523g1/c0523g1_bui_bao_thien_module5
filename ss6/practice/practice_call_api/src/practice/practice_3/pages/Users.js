@@ -25,11 +25,12 @@ export class Users extends Component {
     handleCreate = () => {
         window.location.href = "/user/add";
     }
+
     render() {
         const {users} = this.state;
         return (
             <>
-            <h1>Users</h1>
+                <h1>Users</h1>
                 {users.map(user => {
                     return (
                         <div key={user.id}>

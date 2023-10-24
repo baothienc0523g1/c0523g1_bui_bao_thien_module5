@@ -44,22 +44,25 @@ export function UserDetail() {
 
     return (
         <>
-        <div>
-            <h1>User detail</h1>
-            <form>
-                <div><label>ID</label></div>
-                <div><input name={"id"} value={user.id || ""} onChange={handleChange}/></div>
+            <div>
+                <h1>User detail</h1>
+                <form>
+                    <div><label>ID</label></div>
+                    <div><input name={"id"} value={user.id || ""} onChange={handleChange}/></div>
 
-                <div><label>Name</label></div>
-                <div><input name={"name"} value={user.name || ""} onChange={handleChange}/></div>
+                    <div><label>Name</label></div>
+                    <div><input name={"name"} value={user.name || ""} onChange={handleChange}/></div>
 
-                <div><label>Birthday</label></div>
-                <div><input type={"date"} name={"birthday"} value={user.birthday || ""} onChange={handleChange}/></div>
+                    <div><label>Birthday</label></div>
+                    <div><input type={"date"} name={"birthday"} value={user.birthday || ""} onChange={handleChange}/>
+                    </div>
 
 
-                <div><button type={"button"} onClick={handleSubmit}>Submit</button></div>
-            </form>
-        </div>
+                    <div>
+                        <button type={"button"} onClick={handleSubmit}>Submit</button>
+                    </div>
+                </form>
+            </div>
         </>
     )
 }
