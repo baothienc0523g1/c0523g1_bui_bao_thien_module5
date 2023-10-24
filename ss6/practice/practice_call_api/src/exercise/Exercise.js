@@ -28,7 +28,10 @@ export function Exercise() {
                 axios
                     .post('https://jsonplaceholder.typicode.com/todos', {todoItem})
                     .then(res => {
-                        console.log(res.status)
+                        console.log(res.status);
+                        if (res.status === 201) {
+                            alert("CREATED")
+                        }
                     });
             } catch (err) {
                 console.log(err);
