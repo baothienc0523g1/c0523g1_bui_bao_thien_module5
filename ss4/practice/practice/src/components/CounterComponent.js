@@ -1,25 +1,17 @@
 import {useState} from "react";
+import {useCounter} from "../hooks/useCounter";
 
 function CounterComponent() {
-    const [countOne, setCountOne] = useState(0);
-    const [countTwo, setCountTwo] = useState(0);
-
-    function handleCountOne() {
-        setCountOne((prvValue) => prvValue + 1);
-    }
-
-    function handleCountTwo() {
-        setCountTwo((prvValue) => prvValue + 2);
-    }
-
+    const [counterByOne, incrementByOne] = useCounter(1);
+    const [counterByTwo, incrementByTwo] = useCounter(2);
 
     return (
         <div>
-            <h1>Count by one: {countOne}</h1>
-            <button onClick={handleCountOne}>Add 1</button>
+            <h1>Count by one: {counterByOne}</h1>
+            <button onClick={() => incrementByOne(1)}>Add 1</button>
             <hr/>
-            <h1>Count by two: {countTwo}</h1>
-            <button onClick={handleCountTwo}>Add 2</button>
+            <h1>Count by two: {counterByTwo}</h1>
+            <button onClick={() => incrementByTwo(2)}>Add 2</button>
         </div>
     )
 }

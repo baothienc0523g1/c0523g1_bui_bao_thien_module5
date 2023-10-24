@@ -5,19 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac3f798b-d02d-489d-957e-fdf7f297678d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/src/components/add-edit-list/AddCustomerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/src/components/add-edit-list/AddCustomerForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/src/components/add-edit-list/AddVillaForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/src/components/add-edit-list/AddVillaForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/src/components/add-edit-list/SignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/src/components/add-edit-list/SignUpForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/src/components/default/ItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/src/components/default/ItemCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/src/components/default/MyJsLib.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/src/components/default/MyJsLib.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/src/components/default/ScrollToTopBtn.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/src/components/default/ScrollToTopBtn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useCounter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/practice/practice_call_api/src/exercise/Exercise.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/practice/practice_call_api/src/practice/practice_2/Practice2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/practice/practice_call_api/src/practice/practice_3/pages/UserDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/practice/practice_call_api/src/practice/practice_3/pages/Users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/practice/practice_call_api/src/practice/practice_4/Practice4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/practice/practice_call_api/src/practice/practice_5/Practice5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6/practice/practice_call_api/src/practice/practice_6/Practice6.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/src/components/core/ItemCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/src/components/core/ItemCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/src/components/customer/AddCustomerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/src/components/customer/AddCustomerForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case-study/case-study/src/components/facility/FacilitiesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case-study/case-study/src/components/facility/FacilitiesList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CounterComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CounterComponent.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -30,20 +41,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/GIT - Bai tap/c0523g1_bui_bao_thien_module5/ss4/practice/practice",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/GIT - Bai tap/c0523g1_bui_bao_thien_module5/ss4/practice/practice&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1697689878182</updated>
       <workItem from="1697689879202" duration="1246000" />
+      <workItem from="1698110149966" duration="295000" />
     </task>
     <servers />
   </component>
