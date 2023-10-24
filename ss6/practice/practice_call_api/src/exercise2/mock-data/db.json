@@ -1,0 +1,28 @@
+{
+  "books": [
+    {
+      "id": 3,
+      "title": "Works exactly as Array.slice (i.e. _start is inclusive and _end exclusive)",
+      "author": "Quy",
+      "quantity": 15
+    },
+    {
+      "id": 5,
+      "title": "A POST, PUT or PATCH request should include a Content-Type: application/json header to use the JSON ",
+      "author": "Sang",
+      "quantity": 25
+    },
+    {
+      "id": 6,
+      "title": "Based on the previous db.json file, here are all the default routes. You can also add other",
+      "author": "Trung",
+      "quantity": 30
+    },
+    {
+      "title": "Test1",
+      "author": "Test1",
+      "quantity": "3",
+      "id": 7
+    }
+  ]
+}

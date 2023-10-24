@@ -29,6 +29,7 @@ export function Exercise() {
                     .post('https://jsonplaceholder.typicode.com/todos', {todoItem})
                     .then(res => {
                         console.log("Create request status: " + res.status);
+                        console.log(res);
                         if (res.status === 201) {
                             alert("CREATED")
                         }
