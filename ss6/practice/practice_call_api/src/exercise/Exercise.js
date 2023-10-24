@@ -28,7 +28,7 @@ export function Exercise() {
                 axios
                     .post('https://jsonplaceholder.typicode.com/todos', {todoItem})
                     .then(res => {
-                        console.log(res.status);
+                        console.log("Create request status: " + res.status);
                         if (res.status === 201) {
                             alert("CREATED")
                         }
@@ -46,7 +46,7 @@ export function Exercise() {
         let newId = todoList[todoList.length - 1].id + 1;
         const blankStr = " ";
 
-        if (typeof event !== blankStr || event.length !== 0) {
+        if (typeof event !== blankStr || event.target.value !== 0) {
             setTodoItem(
                 {
                     userId: 1,
