@@ -54,6 +54,7 @@ function App() {
                 <Route path="/facilites" element={<FacilitiesList/>}></Route>
                 <Route path="/contracts" element={<ContractList/>}></Route>
                 <Route path="/sign-up" element={<AddCustomerForm/>}></Route>
+                <Route path="/edit/:customerId" element={<AddCustomerForm/>}></Route>
             </Routes>
             <ScrollToTopBtn/>
             <InfoModal/>

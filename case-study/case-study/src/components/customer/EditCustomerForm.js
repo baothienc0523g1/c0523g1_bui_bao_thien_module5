@@ -2,10 +2,22 @@ import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as yup from "yup";
 import * as customerService from "../../service/customerService";
 import {toast} from "react-toastify";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
+import {useEffect, useState} from "react";
 
 export function AddCustomerForm() {
     const navigate = useNavigate();
+    const {customerId} = useParams();
+    const [existedCustomer, setExistedCustomer] = useState();
+    const getEditCustomer = async () => {
+        const getEditCustomer = await customerService.findById(customerId);
+        setExistedCustomer(getEditCustomer)
+    }
+
+    useEffect(() => {
+        getEditCustomer();
+    }, [])
+
     const myValidator = {
         name: yup.string()
             .matches(/^[A-Za-z]*$/, "Wrong name format!")
@@ -26,20 +38,11 @@ export function AddCustomerForm() {
         gender: yup.string().required()
     };
 
-    const initValue = {
-        name: "",
-        address: "",
-        birthday: "",
-        email: "",
-        phone: "",
-        identity: ""
-    };
-
-    const handleSubmit = (value) => {
-        const status = customerService.add(value);
-        if (status === 201) {
+    const handleEdit = (value) => {
+        const status = customerService.edit(value);
+        if (status === 200) {
             console.log(status)
-            toast("New customer added success" );
+            toast("Customer is edited");
             navigate("/customers")
         }
     }
@@ -65,9 +68,9 @@ export function AddCustomerForm() {
                 <h3 className="management-title mt-3">Add new customer</h3>
                 <hr/>
                 <Formik
-                    initialValues={initValue}
+                    initialValues={existedCustomer}
                     validationSchema={yup.object(myValidator)}
-                    onSubmit={(value) => handleSubmit(value)}>
+                    onSubmit={(value) => handleEdit(value)}>
                     <Form>
                         <div className="mb-2">
                             <label htmlFor="name" className="form-label">Customer's name<span
@@ -137,9 +140,11 @@ export function AddCustomerForm() {
                         </div>
 
                         <div className="mb-2 row">
-                            <button type="button" className="btn btn-outline-info mb-1 col-lg-6 col-md-6">Cancel
+                            <button type={"button"} className="btn btn-outline-info mb-1 col-lg-6 col-md-6">
+                                <Link to={"/"}>Cancel</Link>
                             </button>
-                            <button type={"button"} className="btn btn-outline-primary mb-1 col-lg-6 col-md-6">Confirm
+                            <button type={"button"} className="btn btn-outline-primary mb-1 col-lg-6 col-md-6">
+                                Confirm
                             </button>
                         </div>
                     </Form>

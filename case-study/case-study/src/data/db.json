@@ -1,0 +1,114 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Sang Quoc Phan",
+      "birthDay": "1998-01-01",
+      "gender": "Male",
+      "identity": 9875156248,
+      "phoneNumber": "0902546218",
+      "email": "sang@gmail.com",
+      "customerType": "Gold",
+      "address": "Hue"
+    },
+    {
+      "id": 2,
+      "name": "Phuc Nguyen Quy",
+      "birthDay": "1999-01-01",
+      "gender": "Male",
+      "identity": 9875156248,
+      "phoneNumber": "0902546218",
+      "email": "quy@gmail.com",
+      "customerType": "Gold",
+      "address": "Da Nang"
+    },
+    {
+      "id": 3,
+      "name": "Long Nguyen Truong Dinh",
+      "birthDay": "1999-01-01",
+      "gender": "Male",
+      "identity": 9875156248,
+      "phoneNumber": "0902546218",
+      "email": "long@gmail.com",
+      "customerType": "Gold",
+      "address": "Da Nang"
+    },
+    {
+      "id": 4,
+      "name": "Trung Duc Nguyen",
+      "birthDay": "1970-01-01",
+      "gender": "Male",
+      "identity": 9875156248,
+      "phoneNumber": "0902546218",
+      "email": "trung@gmail.com",
+      "customerType": "Gold",
+      "address": "Quang Nam"
+    },
+    {
+      "id": 5,
+      "name": "Tuan Hung",
+      "birthDay": "1986-01-01",
+      "gender": "Male",
+      "identity": 9875156248,
+      "phoneNumber": "0902546218",
+      "email": "hung@gmail.com",
+      "customerType": "Silver",
+      "address": "Ha Noi"
+    },
+    {
+      "id": 6,
+      "name": "Le Quyen",
+      "birthDay": "1984-01-01",
+      "gender": "Female",
+      "identity": 9875156248,
+      "phoneNumber": "0902546218",
+      "email": "quyen@gmail.com",
+      "customerType": "Silver",
+      "address": "California"
+    },
+    {
+      "id": 7,
+      "name": "Thu Minh",
+      "birthDay": "1983-01-01",
+      "gender": "Female",
+      "identity": 9875156248,
+      "phoneNumber": "0902546218",
+      "email": "minh@gmail.com",
+      "customerType": "Platinum",
+      "address": "Ha Noi"
+    },
+    {
+      "id": 8,
+      "name": "Phuong Thanh",
+      "birthDay": "1986-01-01",
+      "gender": "Female",
+      "identity": 9875156248,
+      "phoneNumber": "0902546218",
+      "email": "thanh@gmail.com",
+      "customerType": "Platinum",
+      "address": "Tp HCM"
+    },
+    {
+      "id": 9,
+      "name": "Xuan Park",
+      "birthDay": "1999-01-01",
+      "gender": "Male",
+      "identity": 9875156248,
+      "phoneNumber": "0902546218",
+      "email": "park@gmail.com",
+      "customerType": "Diamond",
+      "address": "Ha Noi"
+    },
+    {
+      "id": 10,
+      "name": "Tu Long",
+      "birthDay": "1978-01-01",
+      "gender": "Male",
+      "identity": 9875156248,
+      "phoneNumber": "0902546218",
+      "email": "tulong@gmail.com",
+      "customerType": "Diamond",
+      "address": "Ha Noi"
+    }
+  ]
+}
