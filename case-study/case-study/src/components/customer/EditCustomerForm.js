@@ -108,20 +108,22 @@ export function EditCustomerForm() {
                                     <option disabled={true} defaultValue>Chose one</option>
                                     {customerType.map(type => (<option value={type.typeValue} key={type.typeValue} label={type.typeName}/>))}
                                 </Field>
+                                <ErrorMessage name="customerType" component="div" className="form-err-msg"/>
                             </div>
 
                             <div className="mb-2 row">
                                 <div className="col-lg-6 col-mg-6">
                                     <label htmlFor="birthDay" className=" form-label">Birthday<span className="required"> *</span></label>
                                     <Field name="birthDay" id="birthDay" type="date" className="form-control" placeholder="Customer's birthday"/>
-                                    <ErrorMessage name="birthday" component="div" className="form-err-msg"/>
+                                    <ErrorMessage name="birthDay" component="div" className="form-err-msg"/>
                                 </div>
                                 <div className="col-lg-6 col-mg-6">
-                                    <label htmlFor="customerGender" className="form-label">Gender</label>
-                                    <Field as="select" name="gender" id="customerGender" className="form-select" aria-label="Default select example">
+                                    <label htmlFor="gender" className="form-label">Gender</label>
+                                    <Field as="select" name="gender" id="gender" className="form-select" aria-label="Default select example">
                                         <option disabled={true} defaultValue>Chose one</option>
                                         {gender.map(g => (<option value={g.genderName} key={g.genderValue} label={g.genderName}/>))}
                                     </Field>
+                                    <ErrorMessage name="gender" component="div" className="form-err-msg"/>
                                 </div>
                             </div>
 
@@ -135,7 +137,7 @@ export function EditCustomerForm() {
                                 <div className="col-lg-6">
                                     <label htmlFor="phoneNumber" className="form-label">Phone number<span className="required"> *</span></label>
                                     <Field name="phoneNumber" id="phoneNumber" type="tel" className="form-control"  placeholder="starting with 09, with 10 numbers"/>
-                                    <ErrorMessage name="phone" component="div" className="form-err-msg"/>
+                                    <ErrorMessage name="phoneNumber" component="div" className="form-err-msg"/>
                                 </div>
 
                                 <div className="col-lg-6">
