@@ -12,6 +12,8 @@ export function List() {
 
     const [show, setShow] = useState(false);
     const [deleteId, setDeleteId] = useState();
+    const [deleteTitle, setDeleteTitle] = useState();
+
 
     const handleClose = () => {
         setShow(false);
@@ -20,22 +22,23 @@ export function List() {
     const handleCloseAndDelete = async () => {
         let status = await service.remove(deleteId);
         if (status === 200) {
+            getList();// goi line nay de re-render lai list
             toast("xoa thanh cong")
             setShow(false)
         } else {
-            toast("Loi~!")
+            toast.error("Loi~!")
         }
     };
 
-    const handleShow = async (bookId) => {
+    const handleShow = async (bookId, bookTitle) => {
         setDeleteId(bookId);
+        setDeleteTitle(bookTitle);
         setShow(true);
         console.log(bookId)
     };
 
     const getList = async () => {
         const myList = await service.getAll()
-        console.log(myList)
         setBookList([
             ...myList
         ]);
@@ -46,6 +49,7 @@ export function List() {
         getList()
     }, [])
 
+    //id for edit: OK
 
     return (
         <>
@@ -73,12 +77,11 @@ export function List() {
                                         <td>
                                             <button className="btn btn-outline-info">
                                                 <Link to={`/edit/${book.id}`}>Edit</Link>
-
                                             </button>
                                         </td>
                                         <td>
                                             <Button className="btn btn-outline-warning"
-                                                    variant={"primary"} onClick={() => handleShow(book.id)}>Delete
+                                                    variant={"primary"} onClick={() => handleShow(book.id, book.title)}>Delete
                                             </Button>
                                         </td>
                                     </tr>)
@@ -94,7 +97,7 @@ export function List() {
                 <Modal.Header closeButton>
                     <Modal.Title>Xoa</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Ban co chac muon xoa?</Modal.Body>
+                <Modal.Body>Ban co chac muon xoa <span style={{color: "red"}}> {deleteTitle}</span>?</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Huy

@@ -1,22 +1,30 @@
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as yup from "yup";
 import {Link, useNavigate, useParams} from "react-router-dom";
-import React, {useEffect, useState} from "react";
+import  {useEffect, useState} from "react";
 import * as service from "./service/service";
-import {findBookObjById} from "./service/service";
 import {toast} from "react-toastify";
 
+
+//bài này luồng thực thi của edit em thấy khá đúng nhưng vẫn gặp lỗi không biết ở đâu
 export async function Edit() {
     let {bookId} = useParams();
     const [existedBook, setExistedBook] = useState();
     const navigate = useNavigate();
 
-    console.log(bookId);
+    console.log("bookid from app.js -------------   " + bookId);
+
     const getBook = async () => {
-        const obj = await findBookObjById(bookId);
+        const obj = await service.findBookObjById(bookId);
         setExistedBook(obj);
     }
 
+    useEffect(() => {
+        getBook()
+    }, []);
+
+
+    //validate
     const requiredStr = "Khong duoc de trong";
     const invalidQuantity = "So luong khong hop le";
 
@@ -29,19 +37,19 @@ export async function Edit() {
             .min(0, invalidQuantity)
     }
 
+    //submit
     const handleSubmit = async (value) => {
-        const status = await service.edit(value.id, value)
+        const status = await service.edit(existedBook.id, value)
         if (status === 200) {
             toast("Sua thanh kong");
             navigate("/");
         }
     }
 
-    useEffect(() => {
-        getBook()
-    }, []);
+    //log
+    console.log("existed book from service method ----------------" + existedBook);
 
-
+    //render
     if (!existedBook) {
         return null;
     } else {
