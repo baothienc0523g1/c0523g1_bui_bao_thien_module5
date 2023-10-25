@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Formik} from "formik";
+import {ErrorMessage, Formik} from "formik";
 
 function ContactForm() {
     const [form, setForm] = useState({});
@@ -60,22 +60,22 @@ function ContactForm() {
                             <tr>
                                 <td><label htmlFor="name">Name</label></td>
                                 <td><input id="name" name="name" type="text" onChange={handleChange}/></td>
-                                <small style={{color: "red"}}>{errors.name}</small>
+                                <ErrorMessage name="name" component="span"/>
                             </tr>
                             <tr>
                                 <td><label htmlFor="email">Email</label></td>
                                 <td><input id="email" name="email" type="email" onChange={handleChange}/></td>
-                                <small style={{color: "red"}}>{errors.email}</small>
+                                <ErrorMessage name="email" component="span"/>
                             </tr>
                             <tr>
                                 <td><label htmlFor="phone">Phone</label></td>
                                 <td><input id="phone" name="phone" type="text" onChange={handleChange}/></td>
-                                <small style={{color: "red"}}>{errors.phone}</small>
+                                <ErrorMessage name="phone" component="span"/>
                             </tr>
                             <tr>
                                 <td><label htmlFor="message">Message</label></td>
                                 <td><textarea id="message" name="message" onChange={handleChange}/></td>
-                                <small style={{color: "red"}}>{errors.message}</small>
+                                <ErrorMessage name="message" component="span"/>
                             </tr>
                             <tr>
                                 <td colSpan="2">
