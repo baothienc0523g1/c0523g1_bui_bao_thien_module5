@@ -67,7 +67,7 @@ function CustomerList() {
                                     <td>{customer.customerType}</td>
                                     <td>{customer.address}</td>
                                     <td style={{textAlign: "center"}}>
-                                        <Link to={`/customer/edit/${customer.id}`}><i
+                                        <Link to={`/customers/edit/${customer.id}`}><i
                                             className="fas fa-edit fa-lg"/></Link>
                                     </td>
                                     <td style={{textAlign: "center"}}>

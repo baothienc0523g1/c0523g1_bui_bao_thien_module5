@@ -16,7 +16,7 @@ import {EditCustomerForm} from "./components/customer/EditCustomerForm";
 function App() {
     const navigate = useNavigate();
     const signUp = () => {
-        navigate("/sign-up")
+        navigate("/customers/add")
     }
     return (
         <>
@@ -58,8 +58,8 @@ function App() {
                 <Route path="/employees" element={<EmployeeList/>}></Route>
                 <Route path="/facilites" element={<FacilitiesList/>}></Route>
                 <Route path="/contracts" element={<ContractList/>}></Route>
-                <Route path="/sign-up" element={<AddCustomerForm/>}></Route>
-                <Route path="/customer/edit/:customerId" element={<EditCustomerForm/>}></Route>
+                <Route path="/customers/add" element={<AddCustomerForm/>}></Route>
+                <Route path="/customers/edit/:customerId" element={<EditCustomerForm/>}></Route>
             </Routes>
             <ScrollToTopBtn/>
             <InfoModal/>

@@ -8,22 +8,23 @@ export function AddCustomerForm() {
     const navigate = useNavigate();
     // const myValidator = {
     //     name: yup.string()
-    //         .matches(/^[A-Za-z]*$/, "Wrong name format!")
+    //         .matches(/^[A-Za-z ]*$/, "Wrong name format!")
     //         .required(),
     //     address: yup.string().required(),
-    //     birthday: yup.string()
+    //     birthDay: yup.string()
     //         .matches(/^\d{4}\-\d{2}\-\d{2}$/, "wrong birthday format!")
     //         .required(),
     //     email: yup.string()
     //         .matches(/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/, "Invalid email!")
     //         .required(),
-    //     phone: yup.string()
+    //     phoneNumber: yup.string()
     //         .matches(/^090\d{7}$|^091\d{7}$|^\(84\)(90\d{7})$|^\(84\)(91\d{7})$/, "Invalid phone number format!!")
     //         .required(),
     //     identity: yup.string()
     //         .matches(/^\d{9}(\d{3})?$/, "Invalid identity format, put 9 to 12 numbers into this field!!")
     //         .required(),
-    //     gender: yup.string().required()
+    //     gender: yup.string().required(),
+    //     customerType: yup.string().required()
     // };
 
     const initValue = {
@@ -89,7 +90,7 @@ export function AddCustomerForm() {
                         <div className="mb-2">
                             <label htmlFor="customerType" className="form-label">Customer type </label>
                             <Field as="select" name="customerType" id="customerType" className="form-select" aria-label="Default select example">
-                                <option disabled={true} selected={true}>Chose one</option>
+                                <option disabled={true} defaultValue>Chose one</option>
                                 {customerType.map(type => (<option value={type.typeValue} key={type.typeValue} label={type.typeName}/>))}
                             </Field>
                         </div>
@@ -103,7 +104,7 @@ export function AddCustomerForm() {
                             <div className="col-lg-6 col-mg-6">
                                 <label htmlFor="customerGender" className="form-label">Gender</label>
                                 <Field as="select" name="gender" id="customerGender" className="form-select" aria-label="Default select example">
-                                    <option disabled={true} selected={true}>Chose one</option>
+                                    <option disabled={true} defaultValue>Chose one</option>
                                     {gender.map(g => (<option value={g.genderName} key={g.genderValue} label={g.genderName}/>))}
                                 </Field>
                             </div>
