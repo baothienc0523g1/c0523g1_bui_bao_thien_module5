@@ -61,6 +61,9 @@ export function EditCustomerForm() {
         {genderValue: 3, genderName: "Other"},
     ];
 
+    const cancelEdit = () => {
+        navigate("/customers");
+    }
 
     return (
         <>
@@ -87,8 +90,8 @@ export function EditCustomerForm() {
                         <div className="mb-2">
                             <label htmlFor="customerType" className="form-label">Customer type </label>
                             <select className="form-select" aria-label="Default select example" id="customerType">
-                                <option disabled={true} selected={true}>Chose one</option>
-                                {customerType.map(type => (<option value={type.typeValue}>{type.typeName}</option>))}
+                                <option disabled={true} selected={true}>Chose one</option>{customerType.map(type => (
+                                    <option value={type.typeValue} key={type.typeValue}>{type.typeName}</option>))}
                             </select>
                         </div>
 
@@ -102,7 +105,7 @@ export function EditCustomerForm() {
                                 <label htmlFor="customerGender" className="form-label">Gender</label>
                                 <select className="form-select" aria-label="Default select example" id="customerGender">
                                     <option disabled={true} selected={true}>Chose one</option>
-                                    {gender.map(g => (<option value={g.genderValue}>{g.genderName}</option>))}
+                                    {gender.map(g => (<option value={g.genderValue} key={g.genderValue}>{g.genderName}</option>))}
                                 </select>
                             </div>
                         </div>
@@ -128,11 +131,12 @@ export function EditCustomerForm() {
                         </div>
 
                         <div className="mb-2 row">
-                            <button type={"button"} className="btn btn-outline-info mb-1 col-lg-6 col-md-6">
-                                <Link className={"link-tag"} to={"/customers"}>Cancel</Link>
-                            </button>
                             <button type={"submit"} className="btn btn-outline-primary mb-1 col-lg-6 col-md-6">
                                 Confirm
+                            </button>
+                            <button type={"button"} className="btn btn-outline-info mb-1 col-lg-6 col-md-6"
+                                    onClick={cancelEdit}>
+                                Cancel
                             </button>
                         </div>
                     </Form>

@@ -8,9 +8,9 @@ export function DeleteCustomerModal(customer) {
         const status = await customerService.removeCustomer(obj.id)
         if (status === 200) {
             handleCloseFn();
-            toast("Xóa thành công!")
+            toast("Remove customer with name : " + obj.name + " successfully!");
         } else {
-            toast.error("Lỗi")
+            toast.error("Error while remove customer")
         }
     };
     if (!show) return null;

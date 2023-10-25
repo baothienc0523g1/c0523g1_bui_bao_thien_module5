@@ -1,7 +1,11 @@
 import axios from "axios";
 
+const GET_URL = "http://localhost:8080/customers/";
+const POST_URL = 'http://localhost:8080/customers/';
+const PUT_URL = "http://localhost:8080/customers/";
+const GET_BY_ID = "http://localhost:8080/customers/";
+
 const findAll = async () => {
-    const GET_URL = "http://localhost:8080/customers/";
     try {
         const res = await axios.get(GET_URL);
         return res.data;
@@ -12,7 +16,6 @@ const findAll = async () => {
 }
 
 const add = async (value) => {
-    const POST_URL = 'http://localhost:8080/customers/';
     try {
         const res = await axios.post(POST_URL, value);
         console.log(res.status)
@@ -24,7 +27,6 @@ const add = async (value) => {
 }
 
 const edit = async (value) => {
-    const PUT_URL = "http://localhost:8080/customers/";
     try {
         const res = await axios.put(PUT_URL + value.id, value);
         return res.status;
@@ -35,7 +37,6 @@ const edit = async (value) => {
 }
 
 const findById = async (customerId) => {
-    const GET_BY_ID = "http://localhost:8080/customers/";
     try {
         const res = await axios.get(GET_BY_ID + customerId);
         return res.data

@@ -6,7 +6,7 @@ import Footer from "./components/core/Footer";
 import CustomerList from "./components/customer/CustomerList";
 import {EmployeeList} from "./components/employee/EmployeeList";
 import {DeleteModal} from "./components/core/DeleteModal";
-import {Link, NavLink, Route, Routes} from "react-router-dom";
+import {Link, NavLink, Route, Routes, useNavigate} from "react-router-dom";
 import {ContractList} from "./components/contract/ContractList";
 import {FacilitiesList} from "./components/facility/FacilitiesList";
 import {MainPageBody} from "./components/core/MainPageBody";
@@ -14,6 +14,10 @@ import {AddCustomerForm} from "./components/customer/AddCustomerForm";
 import {EditCustomerForm} from "./components/customer/EditCustomerForm";
 
 function App() {
+    const navigate = useNavigate();
+    const signUp = () => {
+        navigate("/sign-up")
+    }
     return (
         <>
             <Header/>
@@ -43,7 +47,7 @@ function App() {
                                 </li>
                             </ul>
                             <span className="navbar-text">“We need a six month vacation, twice a year.”</span>
-                            <button className="sign-in-btn"><Link className="sign-up-link" to="/sign-up">Sign up</Link></button>
+                            <button className="sign-in-btn" onClick={signUp}>Sign up</button>
                         </div>
                     </div>
                 </nav>

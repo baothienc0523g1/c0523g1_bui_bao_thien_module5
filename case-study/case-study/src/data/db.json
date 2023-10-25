@@ -4,122 +4,158 @@
       "id": 1,
       "name": "Sang Quoc Phan",
       "birthDay": "1998-01-01",
-      "gender": "Male",
+      "gender": 1,
       "identity": 5987516248,
       "phoneNumber": "0254096218",
       "email": "sang@gmail.com",
-      "customerType": "Gold",
+      "customerType": 3,
       "address": "Hue"
     },
     {
       "id": 2,
       "name": "Phuc Nguyen Quy",
       "birthDay": "1999-01-01",
-      "gender": "Male",
+      "gender": 1,
       "identity": 9965486248,
       "phoneNumber": "5462180902",
       "email": "quy@gmail.com",
-      "customerType": "Gold",
+      "customerType": 3,
       "address": "Da Nang"
     },
     {
       "id": 3,
       "name": "Long Nguyen Truong Dinh",
       "birthDay": "1999-01-01",
-      "gender": "Male",
+      "gender": 1,
       "identity": 9515856248,
       "phoneNumber": "0254096218",
       "email": "long@gmail.com",
-      "customerType": "Gold",
+      "customerType": 3,
       "address": "Da Nang"
     },
     {
       "id": 4,
       "name": "Trung Duc Nguyen",
       "birthDay": "1970-01-01",
-      "gender": "Male",
+      "gender": 1,
       "identity": 9875156248,
       "phoneNumber": "2546209018",
       "email": "trung@gmail.com",
-      "customerType": "Gold",
+      "customerType": 3,
       "address": "Quang Nam"
     },
     {
       "id": 5,
       "name": "Tuan Hung",
       "birthDay": "1986-01-01",
-      "gender": "Male",
+      "gender": 1,
       "identity": 6521948428,
       "phoneNumber": "923159872",
       "email": "hung@gmail.com",
-      "customerType": "Silver",
+      "customerType": 2,
       "address": "Ha Noi"
     },
     {
       "id": 6,
       "name": "Le Quyen",
       "birthDay": "1984-01-01",
-      "gender": "Female",
+      "gender": 0,
       "identity": 8451123649,
       "phoneNumber": "9865134853",
       "email": "quyen@gmail.com",
-      "customerType": "Silver",
+      "customerType": 2,
       "address": "California"
     },
     {
       "id": 7,
       "name": "Thu Minh",
       "birthDay": "1983-01-01",
-      "gender": "Female",
+      "gender": 0,
       "identity": 6541268478,
       "phoneNumber": "54689742315",
       "email": "minh@gmail.com",
-      "customerType": "Platinum",
+      "customerType": 4,
       "address": "Ha Noi"
     },
     {
       "id": 8,
       "name": "Phuong Thanh",
       "birthDay": "1986-01-01",
-      "gender": "Female",
+      "gender": 0,
       "identity": 4935613548,
       "phoneNumber": "6541235549",
       "email": "thanh@gmail.com",
-      "customerType": "Platinum",
+      "customerType": 4,
       "address": "Tp HCM"
     },
     {
       "id": 9,
       "name": "Tu long",
       "birthDay": "1986-01-01",
-      "gender": "Male",
+      "gender": 1,
       "identity": 9584852654,
       "phoneNumber": "9584136549",
       "email": "longdeptrai@gmail.com",
-      "customerType": "Platinum",
+      "customerType": 4,
       "address": "Tp HN"
     },
     {
       "id": 10,
       "name": "Ribi Sachi",
       "birthDay": "1986-01-01",
-      "gender": "Female",
+      "gender": 0,
       "identity": 9872309999,
       "phoneNumber": "1652486915",
       "email": "Ribisachi@gmail.com",
-      "customerType": "Platinum",
+      "customerType": 4,
       "address": "Tp HCM"
     },
     {
       "id": 11,
       "name": "Loc Shadow",
       "birthDay": "1986-01-01",
-      "gender": "Male",
+      "gender": 1,
       "identity": 5415255444,
       "phoneNumber": "6512548963",
       "email": "Locdeptrai@gmail.com",
-      "customerType": "Platinum",
+      "customerType": 4,
       "address": "Tp HCM"
+    }
+  ],
+  "customer-types": [
+    {
+      "typeValue": 1,
+      "typeName": "Member"
+    },
+    {
+      "typeValue": 2,
+      "typeName": "Silver"
+    },
+    {
+      "typeValue": 3,
+      "typeName": "Gold"
+    },
+    {
+      "typeValue": 4,
+      "typeName": "Platinum"
+    },
+    {
+      "typeValue": 5,
+      "typeName": "Diamond"
+    }
+  ],
+  "genders": [
+    {
+      "genderValue": 1,
+      "genderName": "Male"
+    },
+    {
+      "genderValue": 2,
+      "genderName": "Female"
+    },
+    {
+      "genderValue": 3,
+      "genderName": "Other"
     }
   ]
 }

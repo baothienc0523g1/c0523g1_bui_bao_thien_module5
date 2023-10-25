@@ -28,15 +28,17 @@ export function AddCustomerForm() {
 
     const initValue = {
         name: "",
-        address: "",
-        birthday: "",
+        birthDay: "",
+        gender: 0,
+        identity: "",
+        phoneNumber: "",
         email: "",
-        phone: "",
-        identity: ""
+        customerType: 0,
+        address: ""
     };
 
-    const handleSubmit = (value) => {
-        const status = customerService.add(value);
+    const handleSubmit = async (value) => {
+        const status = await customerService.add(value);
         if (status === 201) {
             console.log(status)
             toast("New customer added success");
@@ -58,6 +60,9 @@ export function AddCustomerForm() {
         {genderValue: 3, genderName: "Other"},
     ];
 
+    const cancel = () => {
+        navigate("/customers")
+    }
 
     return (
         <>
@@ -70,77 +75,65 @@ export function AddCustomerForm() {
                     onSubmit={(value) => handleSubmit(value)}>
                     <Form>
                         <div className="mb-2">
-                            <label htmlFor="name" className="form-label">Customer's name<span
-                                className="required"> *</span></label>
-                            <Field type="text" className="form-control" name={"name"} id="name"
-                                   placeholder="Customer's name"/>
+                            <label htmlFor="name" className="form-label">Customer's name<span className="required"> *</span></label>
+                            <Field name="name" id="name" type="text" className="form-control" placeholder="Customer's name"/>
                             <ErrorMessage name="name" component="div" className="form-err-msg"/>
                         </div>
 
                         <div className="mb-2">
-                            <label htmlFor="address" className="form-label">Customer's address<span
-                                className="required"> *</span></label>
-                            <Field type="text" className="form-control" name={"address"} id="address"
-                                   placeholder="Customer's address"/>
+                            <label htmlFor="address" className="form-label">Customer's address<span className="required"> *</span></label>
+                            <Field name="address" id="address" type="text" className="form-control"  placeholder="Customer's address"/>
                             <ErrorMessage name="address" component="div" className="form-err-msg"/>
                         </div>
 
                         <div className="mb-2">
                             <label htmlFor="customerType" className="form-label">Customer type </label>
-                            <select className="form-select" aria-label="Default select example" id="customerType">
+                            <Field as="select" name="customerType" id="customerType" className="form-select" aria-label="Default select example">
                                 <option disabled={true} selected={true}>Chose one</option>
-                                {customerType.map(type => (<option value={type.typeValue}>{type.typeName}</option>))}
-                            </select>
+                                {customerType.map(type => (<option value={type.typeValue} key={type.typeValue} label={type.typeName}/>))}
+                            </Field>
                         </div>
 
                         <div className="mb-2 row">
                             <div className="col-lg-6 col-mg-6">
-                                <label htmlFor="birthday" className=" form-label">Birthday<span
-                                    className="required"> *</span></label>
-                                <Field type="date" className="form-control" name={"birthday"} id="birthday"
-                                       placeholder=" Customer's birthday"/>
+                                <label htmlFor="birthDay" className=" form-label">Birthday<span className="required"> *</span></label>
+                                <Field name="birthDay" id="birthDay" type="date" className="form-control" placeholder="Customer's birthday"/>
                                 <ErrorMessage name="birthday" component="div" className="form-err-msg"/>
                             </div>
                             <div className="col-lg-6 col-mg-6">
                                 <label htmlFor="customerGender" className="form-label">Gender</label>
-                                <select className="form-select" aria-label="Default select example" id="customerGender">
+                                <Field as="select" name="gender" id="customerGender" className="form-select" aria-label="Default select example">
                                     <option disabled={true} selected={true}>Chose one</option>
-                                    {gender.map(g => (<option value={g.genderValue}>{g.genderName}</option>))}
-                                </select>
+                                    {gender.map(g => (<option value={g.genderName} key={g.genderValue} label={g.genderName}/>))}
+                                </Field>
                             </div>
                         </div>
 
                         <div className="mb-2">
-                            <label htmlFor="email" className="form-label"> Customer' s email<span
-                                className="required"> *</span></label>
-                            <Field type="email" className="form-control" name={"email"} id="email"
-                                   placeholder="ex. abc@gmail.com"/>
+                            <label htmlFor="email" className="form-label"> Customer' s email<span className="required"> *</span></label>
+                            <Field name="email" id="email" type="email" className="form-control" placeholder="ex. abc@gmail.com"/>
                             <ErrorMessage name="email" component="div" className="form-err-msg"/>
                         </div>
 
                         <div className="mb-2 row">
                             <div className="col-lg-6">
-                                <label htmlFor="phone" className="form-label">Phone number<span
-                                    className="required"> *</span></label>
-                                <Field type="tel" className="form-control" name={"phone"} id="phone"
-                                       placeholder="starting with 09, with 10 numbers"/>
+                                <label htmlFor="phoneNumber" className="form-label">Phone number<span className="required"> *</span></label>
+                                <Field name="phoneNumber" id="phoneNumber" type="tel" className="form-control"  placeholder="starting with 09, with 10 numbers"/>
                                 <ErrorMessage name="phone" component="div" className="form-err-msg"/>
                             </div>
 
                             <div className="col-lg-6">
-                                <label htmlFor="identity" className="form-label">Personal ID number<span
-                                    className="required"> *</span></label>
-                                <Field type="number" className="form-control" name={"identity"} id="identity"
-                                       placeholder="with 9 or 12 numbers"/>
+                                <label htmlFor="identity" className="form-label">Personal ID number<span className="required"> *</span></label>
+                                <Field name="identity" id="identity"  type="number" className="form-control" placeholder="with 9 or 12 numbers"/>
                                 <ErrorMessage name="identity" component="div" className="form-err-msg"/>
                             </div>
                         </div>
 
                         <div className="mb-2 row">
-                            <button type="button" className="btn btn-outline-info mb-1 col-lg-6 col-md-6">
-                                <Link className="link-tag" to="/customers">Cancel</Link>
+                            <button onClick={cancel} type="button" className="btn btn-outline-info mb-1 col-lg-6 col-md-6">
+                                Cancel
                             </button>
-                            <button type={"submit"} className="btn btn-outline-primary mb-1 col-lg-6 col-md-6">Confirm
+                            <button type="submit" className="btn btn-outline-primary mb-1 col-lg-6 col-md-6">Confirm
                             </button>
                         </div>
                     </Form>
