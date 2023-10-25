@@ -6,7 +6,7 @@ export function DeleteCustomerModal(customer) {
 
     const handleDelete = async (obj) => {
         const status = await customerService.removeCustomer(obj.id)
-        if (status === 204) {
+        if (status === 200) {
             handleCloseFn();
             toast("Xóa thành công!")
         } else {

@@ -1,11 +1,9 @@
 import axios from "axios";
-import async from "async";
 
 const findAll = async () => {
     const GET_URL = "http://localhost:8080/customers/";
     try {
         const res = await axios.get(GET_URL);
-        console.log(res.data)
         return res.data;
     } catch (err) {
         console.log("error while getting customer list: " + err);
@@ -14,7 +12,7 @@ const findAll = async () => {
 }
 
 const add = async (value) => {
-    const POST_URL = "http://localhost:8080/customers/";
+    const POST_URL = 'http://localhost:8080/customers/';
     try {
         const res = await axios.post(POST_URL, value);
         console.log(res.status)

@@ -11,6 +11,7 @@ import {ContractList} from "./components/contract/ContractList";
 import {FacilitiesList} from "./components/facility/FacilitiesList";
 import {MainPageBody} from "./components/core/MainPageBody";
 import {AddCustomerForm} from "./components/customer/AddCustomerForm";
+import {EditCustomerForm} from "./components/customer/EditCustomerForm";
 
 function App() {
     return (
@@ -54,7 +55,7 @@ function App() {
                 <Route path="/facilites" element={<FacilitiesList/>}></Route>
                 <Route path="/contracts" element={<ContractList/>}></Route>
                 <Route path="/sign-up" element={<AddCustomerForm/>}></Route>
-                <Route path="/edit/:customerId" element={<AddCustomerForm/>}></Route>
+                <Route path="/customer/edit/:customerId" element={<EditCustomerForm/>}></Route>
             </Routes>
             <ScrollToTopBtn/>
             <InfoModal/>

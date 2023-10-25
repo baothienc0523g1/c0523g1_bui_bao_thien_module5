@@ -5,7 +5,7 @@ import {toast} from "react-toastify";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
-export function AddCustomerForm() {
+export function EditCustomerForm() {
     const navigate = useNavigate();
     const {customerId} = useParams();
     const [existedCustomer, setExistedCustomer] = useState();
@@ -65,7 +65,7 @@ export function AddCustomerForm() {
     return (
         <>
             <div id={"customer-add-form"} className="container mb-5" style={{minHeight: "650px"}}>
-                <h3 className="management-title mt-3">Add new customer</h3>
+                <h3 className="management-title mt-3">Edit customer</h3>
                 <hr/>
                 <Formik
                     initialValues={existedCustomer}
@@ -141,9 +141,9 @@ export function AddCustomerForm() {
 
                         <div className="mb-2 row">
                             <button type={"button"} className="btn btn-outline-info mb-1 col-lg-6 col-md-6">
-                                <Link to={"/"}>Cancel</Link>
+                                <Link className={"link-tag"} to={"/customers"}>Cancel</Link>
                             </button>
-                            <button type={"button"} className="btn btn-outline-primary mb-1 col-lg-6 col-md-6">
+                            <button type={"submit"} className="btn btn-outline-primary mb-1 col-lg-6 col-md-6">
                                 Confirm
                             </button>
                         </div>

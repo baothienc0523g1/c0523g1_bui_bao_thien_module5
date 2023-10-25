@@ -2,7 +2,7 @@ import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as yup from "yup";
 import * as customerService from "../../service/customerService";
 import {toast} from "react-toastify";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export function AddCustomerForm() {
     const navigate = useNavigate();
@@ -137,7 +137,8 @@ export function AddCustomerForm() {
                         </div>
 
                         <div className="mb-2 row">
-                            <button type="button" className="btn btn-outline-info mb-1 col-lg-6 col-md-6">Cancel
+                            <button type="button" className="btn btn-outline-info mb-1 col-lg-6 col-md-6">
+                                <Link className="link-tag" to="/customers">Cancel</Link>
                             </button>
                             <button type={"submit"} className="btn btn-outline-primary mb-1 col-lg-6 col-md-6">Confirm
                             </button>
