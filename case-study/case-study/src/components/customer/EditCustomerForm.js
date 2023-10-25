@@ -73,18 +73,14 @@ export function EditCustomerForm() {
                     onSubmit={(value) => handleEdit(value)}>
                     <Form>
                         <div className="mb-2">
-                            <label htmlFor="name" className="form-label">Customer's name<span
-                                className="required"> *</span></label>
-                            <Field type="text" className="form-control" name={"name"} id="name"
-                                   placeholder="Customer's name"/>
+                            <label htmlFor="name" className="form-label">Customer's name<span className="required"> *</span></label>
+                            <Field type="text" className="form-control" name={"name"} id="name" placeholder="Customer's name"/>
                             <ErrorMessage name="name" component="div" className="form-err-msg"/>
                         </div>
 
                         <div className="mb-2">
-                            <label htmlFor="address" className="form-label">Customer's address<span
-                                className="required"> *</span></label>
-                            <Field type="text" className="form-control" name={"address"} id="address"
-                                   placeholder="Customer's address"/>
+                            <label htmlFor="address" className="form-label">Customer's address<span className="required"> *</span></label>
+                            <Field type="text" className="form-control" name={"address"} id="address" placeholder="Customer's address"/>
                             <ErrorMessage name="address" component="div" className="form-err-msg"/>
                         </div>
 
@@ -98,10 +94,8 @@ export function EditCustomerForm() {
 
                         <div className="mb-2 row">
                             <div className="col-lg-6 col-mg-6">
-                                <label htmlFor="birthday" className=" form-label">Birthday<span
-                                    className="required"> *</span></label>
-                                <Field type="date" className="form-control" name={"birthday"} id="birthday"
-                                       placeholder=" Customer's birthday"/>
+                                <label htmlFor="birthday" className=" form-label">Birthday<span className="required"> *</span></label>
+                                <Field type="date" className="form-control" name={"birthday"} id="birthday" placeholder=" Customer's birthday"/>
                                 <ErrorMessage name="birthday" component="div" className="form-err-msg"/>
                             </div>
                             <div className="col-lg-6 col-mg-6">
@@ -114,27 +108,21 @@ export function EditCustomerForm() {
                         </div>
 
                         <div className="mb-2">
-                            <label htmlFor="email" className="form-label"> Customer' s email<span
-                                className="required"> *</span></label>
-                            <Field type="email" className="form-control" name={"email"} id="email"
-                                   placeholder="ex. abc@gmail.com"/>
+                            <label htmlFor="email" className="form-label"> Customer' s email<span className="required"> *</span></label>
+                            <Field type="email" className="form-control" name={"email"} id="email" placeholder="ex. abc@gmail.com"/>
                             <ErrorMessage name="email" component="div" className="form-err-msg"/>
                         </div>
 
                         <div className="mb-2 row">
                             <div className="col-lg-6">
-                                <label htmlFor="phone" className="form-label">Phone number<span
-                                    className="required"> *</span></label>
-                                <Field type="tel" className="form-control" name={"phone"} id="phone"
-                                       placeholder="starting with 09, with 10 numbers"/>
+                                <label htmlFor="phone" className="form-label">Phone number<span className="required"> *</span></label>
+                                <Field type="tel" className="form-control" name={"phone"} id="phone" placeholder="starting with 09, with 10 numbers"/>
                                 <ErrorMessage name="phone" component="div" className="form-err-msg"/>
                             </div>
 
                             <div className="col-lg-6">
-                                <label htmlFor="identity" className="form-label">Personal ID number<span
-                                    className="required"> *</span></label>
-                                <Field type="number" className="form-control" name={"identity"} id="identity"
-                                       placeholder="with 9 or 12 numbers"/>
+                                <label htmlFor="identity" className="form-label">Personal ID number<span className="required"> *</span></label>
+                                <Field type="number" className="form-control" name={"identity"} id="identity" placeholder="with 9 or 12 numbers"/>
                                 <ErrorMessage name="identity" component="div" className="form-err-msg"/>
                             </div>
                         </div>
