@@ -23,12 +23,11 @@ export function DeleteCustomerModal(customer) {
                         <div className="modal-header">
                             <h5 className="modal-title">Confirm delete</h5>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"
-                                    onClick={handleClose}></button>
+                                    onClick={handleCloseFn}></button>
                         </div>
                         <div className="modal-body">
-                            {/* eslint-disable-next-line react/prop-types */}
                             <p>Are sure about remove customer with name: {obj.name}?</p>
-                            <p style={{color: "red"}}>Warning: This action cant be re-do</p>
+                            <p style={{color: "red"}}>Warning: This action cant be un-done!</p>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"
