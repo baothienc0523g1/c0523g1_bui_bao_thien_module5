@@ -9,7 +9,9 @@ function CustomerList() {
     const [deleteCustomer, setDeleteCustomer] = useState({});
 
     useEffect(() => {
-        getList();
+        getList().then(r => {
+            console.log(r.data);
+        });
     }, [])
 
     const getList = async () => {
@@ -27,7 +29,7 @@ function CustomerList() {
     const handleCloseModal = async () => {
         setDeleteCustomer(null);
         setShowModal(false);
-        getList();
+        await getList();
     }
 
 
