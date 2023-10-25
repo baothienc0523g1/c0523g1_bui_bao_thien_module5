@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
 import axios from 'axios';
+import {toast} from "react-toastify";
 
-export function Exercise() {
+export function Exercise1() {
     const [todoList, setTodoList] = useState([]);
     const [todoItem, setTodoItem] = useState({});
 
@@ -31,7 +32,7 @@ export function Exercise() {
                         console.log("Create request status: " + res.status);
                         console.log(res);
                         if (res.status === 201) {
-                            alert("CREATED")
+                            toast("CREATED")
                         }
                     });
             } catch (err) {

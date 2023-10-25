@@ -3,8 +3,8 @@ import React from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import * as yup from "yup";
 import {toast} from "react-toastify";
-import * as service from "./service/service";
-import {findById} from "./service/service";
+import * as service from "../service/service";
+import {findById} from "../service/service";
 
 
 export function Add() {

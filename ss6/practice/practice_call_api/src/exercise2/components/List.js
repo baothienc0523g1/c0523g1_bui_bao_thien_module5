@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import * as service from "./service/service";
+import * as service from "../service/service";
 import {Link, useNavigate} from "react-router-dom";
-import {findById} from "./service/service";
+import {findById} from "../service/service";
 import {toast} from "react-toastify";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -22,7 +22,7 @@ export function List() {
     const handleCloseAndDelete = async () => {
         let status = await service.remove(deleteId);
         if (status === 200) {
-            getList();// goi line nay de re-render lai list
+            await getList();// goi line nay de re-render lai list
             toast("xoa thanh cong")
             setShow(false)
         } else {

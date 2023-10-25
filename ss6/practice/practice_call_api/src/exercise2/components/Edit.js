@@ -1,8 +1,8 @@
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as yup from "yup";
 import {Link, useNavigate, useParams} from "react-router-dom";
-import  {useEffect, useState} from "react";
-import * as service from "./service/service";
+import {useEffect, useState} from "react";
+import * as service from "../service/service";
 import {toast} from "react-toastify";
 
 
