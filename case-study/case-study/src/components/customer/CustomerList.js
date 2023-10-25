@@ -8,20 +8,17 @@ function CustomerList() {
     const [showModal, setShowModal] = useState(false);
     const [deleteCustomer, setDeleteCustomer] = useState({});
 
-    useEffect(() => {
-        getList().then(r => {
-            console.log(r.data);
-        });
-    }, [])
-
     const getList = async () => {
         const myList = await customerService.findAll();
-        setCustomerList([
-            ...myList
-        ])
+        setCustomerList(myList);
     }
 
-    const handleSetDeleteCustomer = async (customer) => {
+    useEffect(() => {
+        getList();
+    }, [])
+
+
+    const handleSetDeleteCustomer = (customer) => {
         setDeleteCustomer(customer);
         setShowModal(true);
     }

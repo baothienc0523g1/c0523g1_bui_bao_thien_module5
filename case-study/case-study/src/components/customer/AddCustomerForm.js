@@ -6,25 +6,25 @@ import {useNavigate} from "react-router-dom";
 
 export function AddCustomerForm() {
     const navigate = useNavigate();
-    const myValidator = {
-        name: yup.string()
-            .matches(/^[A-Za-z]*$/, "Wrong name format!")
-            .required(),
-        address: yup.string().required(),
-        birthday: yup.string()
-            .matches(/^\d{4}\-\d{2}\-\d{2}$/, "wrong birthday format!")
-            .required(),
-        email: yup.string()
-            .matches(/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/, "Invalid email!")
-            .required(),
-        phone: yup.string()
-            .matches(/^090\d{7}$|^091\d{7}$|^\(84\)(90\d{7})$|^\(84\)(91\d{7})$/, "Invalid phone number format!!")
-            .required(),
-        identity: yup.string()
-            .matches(/^\d{9}(\d{3})?$/, "Invalid identity format, put 9 to 12 numbers into this field!!")
-            .required(),
-        gender: yup.string().required()
-    };
+    // const myValidator = {
+    //     name: yup.string()
+    //         .matches(/^[A-Za-z]*$/, "Wrong name format!")
+    //         .required(),
+    //     address: yup.string().required(),
+    //     birthday: yup.string()
+    //         .matches(/^\d{4}\-\d{2}\-\d{2}$/, "wrong birthday format!")
+    //         .required(),
+    //     email: yup.string()
+    //         .matches(/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/, "Invalid email!")
+    //         .required(),
+    //     phone: yup.string()
+    //         .matches(/^090\d{7}$|^091\d{7}$|^\(84\)(90\d{7})$|^\(84\)(91\d{7})$/, "Invalid phone number format!!")
+    //         .required(),
+    //     identity: yup.string()
+    //         .matches(/^\d{9}(\d{3})?$/, "Invalid identity format, put 9 to 12 numbers into this field!!")
+    //         .required(),
+    //     gender: yup.string().required()
+    // };
 
     const initValue = {
         name: "",
@@ -39,7 +39,7 @@ export function AddCustomerForm() {
         const status = customerService.add(value);
         if (status === 201) {
             console.log(status)
-            toast("New customer added success" );
+            toast("New customer added success");
             navigate("/customers")
         }
     }
@@ -66,7 +66,7 @@ export function AddCustomerForm() {
                 <hr/>
                 <Formik
                     initialValues={initValue}
-                    validationSchema={yup.object(myValidator)}
+                    validationSchema={yup.object(null)}
                     onSubmit={(value) => handleSubmit(value)}>
                     <Form>
                         <div className="mb-2">
@@ -139,7 +139,7 @@ export function AddCustomerForm() {
                         <div className="mb-2 row">
                             <button type="button" className="btn btn-outline-info mb-1 col-lg-6 col-md-6">Cancel
                             </button>
-                            <button type={"button"} className="btn btn-outline-primary mb-1 col-lg-6 col-md-6">Confirm
+                            <button type={"submit"} className="btn btn-outline-primary mb-1 col-lg-6 col-md-6">Confirm
                             </button>
                         </div>
                     </Form>

@@ -4,10 +4,9 @@ import {toast} from "react-toastify";
 export function DeleteCustomerModal(customer) {
     const {show, obj, handleCloseFn} = customer
 
-
     const handleDelete = async (obj) => {
-        const res = await customerService.removeCustomer(obj.id)
-        if (res.status === 204) {
+        const status = await customerService.removeCustomer(obj.id)
+        if (status === 204) {
             handleCloseFn();
             toast("Xóa thành công!")
         } else {

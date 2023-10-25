@@ -1,5 +1,5 @@
 import * as service from "../../service/service";
-import {GET_LIST} from "../ActionTypes";
+import {DELETE, GET_LIST} from "../ActionTypes";
 
 const getAll = () => async (dispatch) => {
     try {
@@ -13,4 +13,17 @@ const getAll = () => async (dispatch) => {
         throw err;
     }
 }
-export {getAll}
+
+const removeUser = (id) => async (dispatch) => {
+    try {
+        const status = await service.removeUser(id);
+        dispatch({
+            type: DELETE,
+            payload: "Http status: " + status
+        })
+    } catch (err) {
+        console.log(err);
+        throw err;
+    }
+}
+export {getAll, removeUser}

@@ -15,13 +15,13 @@ const getList = async () => {
     }
 }
 
-const deleteUser = async (id) => {
+const removeUser = async (id) => {
     try {
-        const data = await axios.post(DELETE_URL + id);
+        const data = await axios.delete(DELETE_URL + id);
         return data.status;
     } catch (err) {
         console.log("Error while get list: " + err.message);
     }
 }
 
-export {getList, deleteUser}
+export {getList, removeUser}

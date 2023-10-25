@@ -1,28 +1,19 @@
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {getAll} from "../redux/middleware/UserMiddleware";
+import {getAll, removeUser} from "../redux/middleware/UserMiddleware";
 import {ButtonShowList} from "./ButtonShowList";
 import {ButtonRemove} from "./ButtonRemove";
-import DeleteModal from "./DeleteModal";
 
 export function MyList() {
     const users = useSelector(store => store.users)
     const dispatch = useDispatch();
-    const [show, setShow] = useState(false);
-    const [userForDelete, setUserForDelete] = useState({});
 
     useEffect(() => {
         dispatch(getAll())
     }, []);
 
-    const handleModal = (user) => {
-        setShow(true);
-        setUserForDelete(user)
-    }
-
-    const closeModal = () => {
-        setShow(false);
-        setUserForDelete(null);
+    async function handleDelete(id) {
+        dispatch(removeUser(id));
     }
 
     if (!users) {
@@ -54,7 +45,7 @@ export function MyList() {
                                     <td>{user.website}</td>
                                     <td>
                                         {
-                                            ButtonRemove("Remove", handleModal(user))
+                                            ButtonRemove("Remove", handleDelete(user.id))
                                         }
                                     </td>
                                 </tr>)
@@ -62,11 +53,6 @@ export function MyList() {
                         </tbody>
                     </table>
                 </div>
-                <DeleteModal
-                    show={show}
-                    select={userForDelete}
-                    handleClose={closeModal}
-                ></DeleteModal>
             </>
         );
     }
