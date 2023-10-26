@@ -7,8 +7,8 @@ function CustomerList() {
     const [customerList, setCustomerList] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [deleteCustomer, setDeleteCustomer] = useState({});
-    const [searchName, setSearchName] = useState();
-    const [searchAddress, setSearchAddress] = useState();
+    const [searchName, setSearchName] = useState("");
+    const [searchAddress, setSearchAddress] = useState("");
 
 
     useEffect(() => {
@@ -45,6 +45,12 @@ function CustomerList() {
         console.log(address);
     }
 
+    const keywordReset = () => {
+        const emptyStr = "";
+        setSearchAddress(emptyStr);
+        setSearchName(emptyStr);
+    }
+
 
     if (!customerList) {
         return null
@@ -56,16 +62,19 @@ function CustomerList() {
                     <div className="float-lg-end row">
                         <input value={searchName}
                                onChange={(name) => handleSearchName(name)}
-                               className="input-group-text col-lg-6"
+                               className="input-group-text col-lg-5"
                                placeholder={"Search with name"}
                                type="text"
                         />
                         <input value={searchAddress}
                                onChange={(address) => handleSearchAddress(address)}
-                               className="input-group-text col-lg-6"
+                               className="input-group-text col-lg-5"
                                placeholder={"Search with address"}
                                type="text"
                         />
+                        <button
+                            className="btn btn-outline-info col-lg-2"
+                            onClick={keywordReset}>Reset</button>
                     </div>
                     <table className="table table-striped mt-2" id="customer-table">
                         <thead>

@@ -7,16 +7,17 @@ export function ContractList() {
     const [showModal, setShowModal] = useState(false);
     const [contractForDelete, setContractForDelete] = useState();
     const [contractList, setContractList] = useState();
+    const [contractSearchName, setContracSearchtName] = useState("");
     const navigate = useNavigate();
 
-    const getList = async () => {
-        const myList = await contractService.findAll();
+    const getList = async (contractSearchName = "") => {
+        const myList = await contractService.findAll(contractSearchName);
         await setContractList(myList);
     }
 
     useEffect(() => {
-        getList();
-    }, []);
+        getList(contractSearchName);
+    }, [contractSearchName]);
 
     const handleGetFormCreateContract = () => {
         navigate("/contracts/add")
@@ -32,7 +33,13 @@ export function ContractList() {
         await getList();
     }
 
+    const handleSearchContract = (keyword) => {
+        setContracSearchtName(keyword.target.value);
+    }
 
+    const handleResetKeyword = () => {
+        setContracSearchtName("");
+    }
     if (!contractList) {
         return null
     } else {
@@ -40,6 +47,17 @@ export function ContractList() {
             <div className="container management-div">
                 <h1 className="management-title">Contract List</h1>
                 <button className="sign-in-btn" onClick={handleGetFormCreateContract}>Create new contract</button>
+                <button
+                    className="btn btn-outline-info float-lg-end"
+                    onClick={handleResetKeyword}
+                >Reset
+                </button>
+                <input
+                    value={contractSearchName}
+                    onChange={(value) => handleSearchContract(value)}
+                    className="input-group-text float-lg-end"
+                    type="text"/>
+
                 <table className="table table-striped mt-2" id="customer-table">
                     <thead>
                     <tr>
@@ -53,8 +71,7 @@ export function ContractList() {
                     </tr>
                     </thead>
                     <tbody>
-                    {
-                        contractList.map((contract, index) => {
+                    {contractList.length !== 0 ? contractList.map((contract, index) => {
                             return (
                                 <tr key={contract.id}>
                                     <td>{index + 1}</td>
@@ -75,7 +92,9 @@ export function ContractList() {
                                 </tr>
                             )
                         })
-                    }
+                        : (<tr>
+                            <td colSpan={9}>There is no contract name: {contractSearchName}</td>
+                        </tr>)}
                     </tbody>
                 </table>
                 <DeleteContractModal

@@ -1,14 +1,14 @@
 import axios from "axios";
 
-const GET_URL = "http://localhost:8080/contracts/";
+const GET_URL = "http://localhost:8080/contracts";
 const GET_BY_ID_URL = "http://localhost:8080/contracts/";
 const POST_URL = "http://localhost:8080/contracts/";
 const PATCH_URL = "http://localhost:8080/contracts/";
 const DELETE_URL = "http://localhost:8080/contracts/";
 
-const findAll = async () => {
+const findAll = async (keyword) => {
     try {
-        const res = await axios.get(GET_URL)
+        const res = await axios.get(GET_URL + `?name_like=${keyword}`)
         return res.data;
     } catch (err) {
         console.log("error while getting contract list: " + err);
