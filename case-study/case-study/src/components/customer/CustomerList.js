@@ -117,7 +117,7 @@ function CustomerList() {
                                 )
                             })
                             : (<tr>
-                                <td colSpan={10}><span>There is no customer: <h1> {searchName}</h1> </span></td>
+                                <td colSpan={10}><span>There is no data with keyword: <h1> {searchName} {searchAddress}</h1> </span></td>
                             </tr>)
                         }
                         </tbody>
