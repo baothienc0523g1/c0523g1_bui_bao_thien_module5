@@ -13,11 +13,11 @@
     },
     {
       "id": 2,
-      "name": "Phuc Nguyen Quy",
+      "name": "Nguyen Phuc Quy",
       "birthDay": "1999-01-01",
       "gender": 1,
-      "identity": 9965486248,
-      "phoneNumber": "5462180902",
+      "identity": 996548624811,
+      "phoneNumber": "0909111111",
       "email": "quy@gmail.com",
       "customerType": 3,
       "address": "Da Nang"
@@ -90,14 +90,14 @@
     },
     {
       "id": 9,
-      "name": "Tu long",
+      "name": "Tu Long",
       "birthDay": "1986-01-01",
       "gender": 1,
-      "identity": 9584852654,
-      "phoneNumber": "9584136549",
+      "identity": 123123131,
+      "phoneNumber": "0909101010",
       "email": "longdeptrai@gmail.com",
       "customerType": 4,
-      "address": "Tp HN"
+      "address": "HN"
     },
     {
       "id": 10,
@@ -156,6 +156,40 @@
     {
       "genderValue": 3,
       "genderName": "Other"
+    }
+  ],
+  "contracts": [
+    {
+      "id": 3,
+      "name": "HD3",
+      "startDate": "2022-01-01",
+      "endDate": "2022-01-02",
+      "deposit": 250,
+      "totalPay": 2000
+    },
+    {
+      "id": 4,
+      "name": "HD4",
+      "startDate": "2022-01-01",
+      "endDate": "2022-01-02",
+      "deposit": 250,
+      "totalPay": 2100
+    },
+    {
+      "id": 5,
+      "name": "HD5",
+      "startDate": "2022-01-01",
+      "endDate": "2022-01-02",
+      "deposit": 250,
+      "totalPay": 3300
+    },
+    {
+      "id": 6,
+      "name": "HD6",
+      "startDate": "2022-01-01",
+      "endDate": "2022-01-02",
+      "deposit": 250,
+      "totalPay": 3333
     }
   ]
 }

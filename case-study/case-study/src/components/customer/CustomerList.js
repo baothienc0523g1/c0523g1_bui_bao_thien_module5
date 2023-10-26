@@ -7,14 +7,17 @@ function CustomerList() {
     const [customerList, setCustomerList] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [deleteCustomer, setDeleteCustomer] = useState({});
+    const [searchName, setSearchName] = useState();
+    const [searchAddress, setSearchAddress] = useState();
+
 
     useEffect(() => {
-        getList()
-    }, [])
+        getList(searchName, searchAddress)
+    }, [searchName, searchAddress])
 
 
-    const getList = async () => {
-        const myList = await customerService.findAll();
+    const getList = async (searchKeyword = "", searchAddress = "") => {
+        const myList = await customerService.findAll(searchKeyword, searchAddress);
         setCustomerList(myList);
     }
 
@@ -30,14 +33,40 @@ function CustomerList() {
         await getList();
     }
 
+    const handleSearchName = (name) => {
+        let key = name.target.value;
+        setSearchName(key);
+        console.log(name);
+    }
 
-    if (customerList.length === 0) {
-        return null;
+    const handleSearchAddress = (address) => {
+        let key = address.target.value;
+        setSearchAddress(key);
+        console.log(address);
+    }
+
+
+    if (!customerList) {
+        return null
     } else {
         return (
             <>
                 <h1 className="management-title">Customer List</h1>
                 <div className="container management-div">
+                    <div className="float-lg-end row">
+                        <input value={searchName}
+                               onChange={(name) => handleSearchName(name)}
+                               className="input-group-text col-lg-6"
+                               placeholder={"Search with name"}
+                               type="text"
+                        />
+                        <input value={searchAddress}
+                               onChange={(address) => handleSearchAddress(address)}
+                               className="input-group-text col-lg-6"
+                               placeholder={"Search with address"}
+                               type="text"
+                        />
+                    </div>
                     <table className="table table-striped mt-2" id="customer-table">
                         <thead>
                         <tr>
@@ -54,30 +83,33 @@ function CustomerList() {
                         </tr>
                         </thead>
                         <tbody>
-                        {customerList.map((customer, index) => {
-                            return (
-                                <tr key={customer.id}>
-                                    <td>{index + 1}</td>
-                                    <td>{customer.name}</td>
-                                    <td>{customer.birthDay}</td>
-                                    <td>{customer.gender}</td>
-                                    <td>{customer.identity}</td>
-                                    <td>{customer.phoneNumber}</td>
-                                    <td>{customer.email}</td>
-                                    <td>{customer.customerType}</td>
-                                    <td>{customer.address}</td>
-                                    <td style={{textAlign: "center"}}>
-                                        <Link to={`/customers/edit/${customer.id}`}><i
-                                            className="fas fa-edit fa-lg"/></Link>
-                                    </td>
-                                    <td style={{textAlign: "center"}}>
-                                        <a type="button"
-                                           onClick={() => handleSetDeleteCustomer(customer)}><i
-                                            className="fas fa-trash fa-lg" style={{color: "red"}}></i></a>
-                                    </td>
-                                </tr>
-                            )
-                        })
+                        {customerList.length !== 0 ? customerList.map((customer, index) => {
+                                return (
+                                    <tr key={customer.id}>
+                                        <td>{index + 1}</td>
+                                        <td>{customer.name}</td>
+                                        <td>{customer.birthDay}</td>
+                                        <td>{customer.gender}</td>
+                                        <td>{customer.identity}</td>
+                                        <td>{customer.phoneNumber}</td>
+                                        <td>{customer.email}</td>
+                                        <td>{customer.customerType}</td>
+                                        <td>{customer.address}</td>
+                                        <td style={{textAlign: "center"}}>
+                                            <Link to={`/customers/edit/${customer.id}`}><i
+                                                className="fas fa-edit fa-lg"/></Link>
+                                        </td>
+                                        <td style={{textAlign: "center"}}>
+                                            <a type="button"
+                                               onClick={() => handleSetDeleteCustomer(customer)}><i
+                                                className="fas fa-trash fa-lg" style={{color: "red"}}></i></a>
+                                        </td>
+                                    </tr>
+                                )
+                            })
+                            : (<tr>
+                                <td colSpan={10}><span>There is no customer: <h1> {searchName}</h1> </span></td>
+                            </tr>)
                         }
                         </tbody>
                     </table>

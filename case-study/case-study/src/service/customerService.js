@@ -1,13 +1,13 @@
 import axios from "axios";
 
-const GET_URL = "http://localhost:8080/customers/";
+const GET_URL = "http://localhost:8080/customers";
 const POST_URL = 'http://localhost:8080/customers/';
 const PUT_URL = "http://localhost:8080/customers/";
 const GET_BY_ID = "http://localhost:8080/customers/";
 
-const findAll = async () => {
+const findAll = async (seachName, searchAddress) => {
     try {
-        const res = await axios.get(GET_URL);
+        const res = await axios.get(GET_URL + `?name_like=${seachName}&address_like=${searchAddress}`);
         return res.data;
     } catch (err) {
         console.log("error while getting customer list: " + err);
