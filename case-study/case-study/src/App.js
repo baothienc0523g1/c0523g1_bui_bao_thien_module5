@@ -16,6 +16,10 @@ import {EditContractForm} from "./components/contract/EditContractForm";
 import {MyNavBar} from "./components/core/MyNavBar";
 import {FacilitiesTable} from "./components/facility/FacilitiesTable";
 import {AddVillaForm} from "./components/facility/villa/AddVillaForm";
+import {EditVillaForm} from "./components/facility/villa/EditVillaForm";
+import {Error} from "./components/core/Error";
+import {AddHouseForm} from "./components/facility/house/AddHouseForm";
+import {EditHouseForm} from "./components/facility/house/EditHouseForm";
 
 function App() {
     return (
@@ -24,19 +28,24 @@ function App() {
             <MyNavBar/>
             <Routes>
                 <Route path="/" element={<MainPageBody/>}/>
-                <Route path="/employees" element={<EmployeeList/>}></Route>
-                <Route path="/facilities" element={<FacilitiesTable/>}></Route>
+                <Route path="/employees" element={<EmployeeList/>}/>
+                <Route path="/facilities" element={<FacilitiesTable/>}/>
 
-                <Route path="/contracts" element={<ContractList/>}></Route>
-                <Route path="/contracts/add/" element={<AddContractForm/>}></Route>
-                <Route path="/contracts/edit/:contractId" element={<EditContractForm/>}></Route>
+                <Route path="/contracts" element={<ContractList/>}/>
+                <Route path="/contracts/add/" element={<AddContractForm/>}/>
+                <Route path="/contracts/edit/:contractId" element={<EditContractForm/>}/>
 
-                <Route path="/customers" element={<CustomerList/>}></Route>
-                <Route path="/customers/add" element={<AddCustomerForm/>}></Route>
-                <Route path="/customers/edit/:customerId" element={<EditCustomerForm/>}></Route>
+                <Route path="/customers" element={<CustomerList/>}/>
+                <Route path="/customers/add" element={<AddCustomerForm/>}/>
+                <Route path="/customers/edit/:customerId" element={<EditCustomerForm/>}/>
 
-                <Route path="/villa/add" element={<AddVillaForm/>}></Route>
+                <Route path="/houses/add" element={<AddHouseForm/>}/>
+                <Route path="/houses/edit/:houseId" element={<EditHouseForm/>}/>
 
+                <Route path="/villas/add" element={<AddVillaForm/>}/>
+                <Route path="/villas/edit/:villaId" element={<EditVillaForm/>}/>
+
+                <Route path="/*" element={<Error/>}/>
             </Routes>
             <ScrollToTopBtn/>
             <InfoModal/>

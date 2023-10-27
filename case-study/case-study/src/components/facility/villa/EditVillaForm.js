@@ -1,23 +1,23 @@
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as yup from "yup";
 import * as villaService from "../../../service/facilities/viilaService"
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {toast} from "react-toastify";
+import {useEffect, useState} from "react";
 
-export function AddVillaForm() {
+export function EditVillaForm() {
     const navigate = useNavigate();
+    const [existedVilla, setExistedVilla] = useState();
+    const {villaId} = useParams();
 
-    const initValue = {
-        name: "",
-        area: 0,
-        rentCost: 0,
-        maxSlot: 0,
-        rentType: "",
-        roomType: "",
-        description: "",
-        poolArea: 0,
-        floors: 0
+    const getVillaForEdit = async (id) => {
+        const villa = await villaService.findById(id);
+        setExistedVilla(villa);
     }
+
+    useEffect(() => {
+        getVillaForEdit(villaId);
+    }, []);
 
     const requiredStr = "Please fill this field!";
     const invalidValue = "Invalid value, please try again!";
@@ -34,31 +34,32 @@ export function AddVillaForm() {
         floors: yup.number().min(0, invalidValue).required(requiredStr),
     }
 
-    const handleSubmit = async (value) => {
+    const handleEdit = async (value) => {
         console.log("onsubmit")
-        let status = await villaService.add(value);
-        if (status === 201) {
-            toast("New Villa is added to list!")
+        let status = await villaService.edit(value);
+        if (status === 200) {
+            toast("Villa with name: " + value.name + " is edited!!")
             navigate("/facilities");
         }
     }
 
     const cancel = () => {
-        navigate("/facilities")
+        navigate(`/facilities`)
     }
 
+    if (!existedVilla) {
+        return null;
+    }
     return (
         <>
             <div id={"customer-add-form"} className="container mb-5" style={{minHeight: "650px"}}>
-                <h3 className="management-title mt-3">Add new customer</h3>
+                <h3 className="management-title mt-3">Add new villa</h3>
                 <hr/>
                 <Formik
-                    initialValues={initValue}
+                    initialValues={existedVilla}
                     validationSchema={yup.object(myValidator)}
                     onSubmit={(value) => {
-                        handleSubmit(value).then(r => {
-                            console.log(value.toString())
-                            console.log("submit");
+                        handleEdit(value).then(r => {
                         })
                     }}>
                     <Form>

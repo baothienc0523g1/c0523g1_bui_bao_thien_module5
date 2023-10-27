@@ -392,7 +392,7 @@
       "roomType": "Phong tieu chuan quoc te",
       "description": "Chuyen doi ta",
       "poolArea": 100,
-      "floors": 3
+      "floors": 34
     },
     {
       "id": 2,
@@ -444,7 +444,7 @@
     },
     {
       "id": 6,
-      "name": "Villa 6",
+      "name": "Villa 66",
       "area": 1000,
       "rentCost": 3700,
       "maxSlot": 15,
@@ -453,18 +453,6 @@
       "description": "Co khong giu mat dung tim",
       "poolArea": 200,
       "floors": 5
-    },
-    {
-      "name": "123",
-      "area": 123,
-      "rentCost": 999,
-      "maxSlot": 4545,
-      "rentType": "5454",
-      "roomType": "54545",
-      "description": "54545",
-      "poolArea": 0,
-      "floors": 123,
-      "id": 7
     }
   ]
 }
