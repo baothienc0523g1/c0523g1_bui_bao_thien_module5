@@ -8,7 +8,10 @@ const DELETE_URL = "http://localhost:8080/contracts/";
 
 const findAll = async (keyword) => {
     try {
-        const res = await axios.get(GET_URL + `?name_like=${keyword}`)
+        const res = await axios.get(GET_URL
+            + `?name_like=${keyword}`
+            + `&_sort=startDate&_order=desc`
+    )
         return res.data;
     } catch (err) {
         console.log("error while getting contract list: " + err);

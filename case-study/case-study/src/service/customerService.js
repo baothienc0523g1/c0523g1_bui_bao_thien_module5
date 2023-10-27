@@ -3,11 +3,17 @@ import axios from "axios";
 const GET_URL = "http://localhost:8080/customers";
 const POST_URL = 'http://localhost:8080/customers/';
 const PUT_URL = "http://localhost:8080/customers/";
+const DELETE_URL = "http://localhost:8080/customers/";
 const GET_BY_ID = "http://localhost:8080/customers/";
+const LOCAL_HOST = "http://localhost:8080/";
 
-const findAll = async (seachName, searchAddress) => {
+
+const findAll = async (searchName, searchAddress) => {
     try {
-        const res = await axios.get(GET_URL + `?name_like=${seachName}&address_like=${searchAddress}`);
+        const res = await axios.get(GET_URL
+        + `?name_like=${searchName}&customerType.typeName_like=${searchAddress}`
+        + `&_sort=id&_order=desc`
+        );
         return res.data;
     } catch (err) {
         console.log("error while getting customer list: " + err);
@@ -47,7 +53,6 @@ const findById = async (customerId) => {
 }
 
 const removeCustomer = async (customerId) => {
-    const DELETE_URL = "http://localhost:8080/customers/";
     try {
         const res = await axios.delete(DELETE_URL + customerId);
         return res.status
@@ -57,4 +62,23 @@ const removeCustomer = async (customerId) => {
     }
 }
 
-export {findAll, add, edit, findById, removeCustomer};
+const getCustomerType = async () => {
+    try {
+        const res = await axios.get(LOCAL_HOST + "customer_types");
+        return res.data
+    } catch (err) {
+        console.log("error while delete customer: " + err);
+        throw err;
+    }
+}
+
+const getGender = async () => {
+    try {
+        const res = await axios.get(LOCAL_HOST + "genders");
+        return res.data
+    } catch (err) {
+        console.log("error while delete customer: " + err);
+        throw err;
+    }
+}
+export {findAll, add, edit, findById, removeCustomer, getCustomerType, getGender};

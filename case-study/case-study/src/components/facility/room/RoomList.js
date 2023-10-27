@@ -1,4 +1,4 @@
-import * as roomService from "../../../service/roomService";
+import * as roomService from "../../../service/facilities/roomService";
 
 export function RoomList() {
     return (

@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import * as customerService from "../../service/customerService";
 import {Link} from "react-router-dom";
 import {DeleteCustomerModal} from "./DeleteCustomerModal";
+import {getParsedDate} from "../../utilities/getParseDay";
+import {JS} from "json-server/lib/cli/utils/is";
 
 function CustomerList() {
     const [customerList, setCustomerList] = useState([]);
@@ -69,7 +71,7 @@ function CustomerList() {
                         <input value={searchAddress}
                                onChange={(address) => handleSearchAddress(address)}
                                className="input-group-text col-lg-5"
-                               placeholder={"Search with address"}
+                               placeholder={"Search with type"}
                                type="text"
                         />
                         <button
@@ -97,12 +99,12 @@ function CustomerList() {
                                     <tr key={customer.id}>
                                         <td>{index + 1}</td>
                                         <td>{customer.name}</td>
-                                        <td>{customer.birthDay}</td>
-                                        <td>{customer.gender}</td>
+                                        <td>{getParsedDate(customer.birthDay)}</td>
+                                        <td>{customer.gender.genderName}</td>
                                         <td>{customer.identity}</td>
                                         <td>{customer.phoneNumber}</td>
                                         <td>{customer.email}</td>
-                                        <td>{customer.customerType}</td>
+                                        <td>{customer.customerType.typeName}</td>
                                         <td>{customer.address}</td>
                                         <td style={{textAlign: "center"}}>
                                             <Link to={`/customers/edit/${customer.id}`}><i

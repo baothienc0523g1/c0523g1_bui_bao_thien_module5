@@ -4,157 +4,206 @@
       "id": 1,
       "name": "Sang Quoc Phan",
       "birthDay": "1998-01-01",
-      "gender": 1,
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
       "identity": 123123123,
       "phoneNumber": "0909101010",
       "email": "sang@gmail.com",
-      "customerType": 3,
+      "customerType": {
+        "id": 3,
+        "typeName": "Gold"
+      },
       "address": "Hue"
     },
     {
       "id": 2,
-      "name": "Nguyen Phuc Quy",
+      "name": "Nguyen Phuc Quy Ga",
       "birthDay": "1999-01-01",
-      "gender": 1,
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
       "identity": 996548624811,
       "phoneNumber": "0909111111",
       "email": "quy@gmail.com",
-      "customerType": 3,
+      "customerType": {
+        "id": 3,
+        "typeName": "Gold"
+      },
       "address": "Da Nang"
     },
     {
       "id": 3,
       "name": "Long Nguyen Truong Dinh",
       "birthDay": "1999-01-01",
-      "gender": 1,
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
       "identity": 9515856248,
       "phoneNumber": "0254096218",
       "email": "long@gmail.com",
-      "customerType": 3,
+      "customerType": {
+        "id": 3,
+        "typeName": "Gold"
+      },
       "address": "Da Nang"
     },
     {
       "id": 4,
       "name": "Trung Duc Nguyen",
       "birthDay": "1970-01-01",
-      "gender": 1,
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
       "identity": 9875156248,
       "phoneNumber": "2546209018",
       "email": "trung@gmail.com",
-      "customerType": 3,
+      "customerType": {
+        "id": 3,
+        "typeName": "Gold"
+      },
       "address": "Quang Nam"
     },
     {
       "id": 5,
       "name": "Tuan Hung",
       "birthDay": "1986-01-01",
-      "gender": 1,
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
       "identity": 6521948428,
       "phoneNumber": "923159872",
       "email": "hung@gmail.com",
-      "customerType": 2,
+      "customerType": {
+        "id": 2,
+        "typeName": "Silver"
+      },
       "address": "Ha Noi"
-    },
-    {
-      "id": 6,
-      "name": "Le Quyen",
-      "birthDay": "1984-01-01",
-      "gender": 0,
-      "identity": 8451123649,
-      "phoneNumber": "9865134853",
-      "email": "quyen@gmail.com",
-      "customerType": 2,
-      "address": "California"
     },
     {
       "id": 7,
       "name": "Thu Minh",
       "birthDay": "1983-01-01",
-      "gender": 0,
+      "gender": {
+        "id": 2,
+        "genderName": "Female"
+      },
       "identity": 6541268478,
       "phoneNumber": "54689742315",
       "email": "minh@gmail.com",
-      "customerType": 4,
+      "customerType": {
+        "id": 2,
+        "typeName": "Silver"
+      },
       "address": "Ha Noi"
     },
     {
       "id": 8,
       "name": "Phuong Thanh",
       "birthDay": "1986-01-01",
-      "gender": 0,
+      "gender": {
+        "id": 2,
+        "genderName": "Female"
+      },
       "identity": 4935613548,
       "phoneNumber": "6541235549",
       "email": "thanh@gmail.com",
-      "customerType": 4,
+      "customerType": {
+        "id": 2,
+        "typeName": "Silver"
+      },
       "address": "Tp HCM"
     },
     {
       "id": 9,
       "name": "Tu Long",
       "birthDay": "1986-01-01",
-      "gender": 1,
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
       "identity": 123123131,
       "phoneNumber": "0909101010",
       "email": "longdeptrai@gmail.com",
-      "customerType": 4,
+      "customerType": {
+        "id": 4,
+        "typeName": "Platinum"
+      },
       "address": "HN"
     },
     {
       "id": 10,
       "name": "Ribi Sachi",
       "birthDay": "1986-01-01",
-      "gender": 0,
+      "gender": {
+        "id": 2,
+        "genderName": "Female"
+      },
       "identity": 9872309999,
       "phoneNumber": "1652486915",
       "email": "Ribisachi@gmail.com",
-      "customerType": 4,
+      "customerType": {
+        "id": 4,
+        "typeName": "Platinum"
+      },
       "address": "Tp HCM"
     },
     {
       "id": 11,
       "name": "Loc Shadow",
       "birthDay": "1986-01-01",
-      "gender": 1,
+      "gender": {
+        "id": 1,
+        "genderName": "Male"
+      },
       "identity": 5415255444,
       "phoneNumber": "6512548963",
       "email": "Locdeptrai@gmail.com",
-      "customerType": 4,
+      "customerType": {
+        "id": 4,
+        "typeName": "Platinum"
+      },
       "address": "Tp HCM"
     }
   ],
-  "customer-types": [
+  "customer_types": [
     {
-      "typeValue": 1,
+      "id": 1,
       "typeName": "Member"
     },
     {
-      "typeValue": 2,
+      "id": 2,
       "typeName": "Silver"
     },
     {
-      "typeValue": 3,
+      "id": 3,
       "typeName": "Gold"
     },
     {
-      "typeValue": 4,
+      "id": 4,
       "typeName": "Platinum"
     },
     {
-      "typeValue": 5,
+      "id": 5,
       "typeName": "Diamond"
     }
   ],
   "genders": [
     {
-      "genderValue": 1,
+      "id": 1,
       "genderName": "Male"
     },
     {
-      "genderValue": 2,
+      "id": 2,
       "genderName": "Female"
     },
     {
-      "genderValue": 3,
+      "id": 3,
       "genderName": "Other"
     }
   ],
@@ -190,6 +239,232 @@
       "endDate": "2022-01-02",
       "deposit": 250,
       "totalPay": 3333
+    },
+    {
+      "name": "HD54",
+      "startDate": "2023-12-12",
+      "endDate": "2024-12-12",
+      "deposit": 40,
+      "totalPay": 400,
+      "id": 7
+    },
+    {
+      "name": "HD052",
+      "startDate": "2021-02-11",
+      "endDate": "2021-03-11",
+      "deposit": 80,
+      "totalPay": 800,
+      "id": 8
+    }
+  ],
+  "houses": [
+    {
+      "id": 1,
+      "name": "Nha 1",
+      "area": 200,
+      "rentCost": 2000,
+      "maxSlot": 8,
+      "rentType": "days",
+      "roomType": "Phong tieu chuan kep",
+      "description": "Giuong doi",
+      "floors": 2
+    },
+    {
+      "id": 2,
+      "name": "Nha 2",
+      "area": 250,
+      "rentCost": 2100,
+      "maxSlot": 8,
+      "rentType": "days",
+      "roomType": "Phong tieu chuan binh thuong",
+      "description": "Giuong doi",
+      "floors": 4
+    },
+    {
+      "id": 3,
+      "name": "Nha 3",
+      "area": 300,
+      "rentCost": 2200,
+      "maxSlot": 9,
+      "rentType": "days",
+      "roomType": "Phong khong co tieu chuan",
+      "description": "Giuong doi",
+      "floors": 4
+    },
+    {
+      "id": 4,
+      "name": "Nha 4",
+      "area": 400,
+      "rentCost": 2400,
+      "maxSlot": 10,
+      "rentType": "months",
+      "roomType": "Phong nhieu tieu chuan",
+      "description": "Giuong doi",
+      "floors": 3
+    },
+    {
+      "id": 5,
+      "name": "Nha 5",
+      "area": 500,
+      "rentCost": 2500,
+      "maxSlot": 12,
+      "rentType": "years",
+      "roomType": "Phong chay chua chay",
+      "description": "Giuong doi",
+      "floors": 5
+    },
+    {
+      "id": 6,
+      "name": "Nha 6",
+      "area": 700,
+      "rentCost": 3000,
+      "maxSlot": 15,
+      "rentType": "days",
+      "roomType": "Phong benh hon chua benh",
+      "description": "Giuong doi",
+      "floors": 5
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Phong 1",
+      "area": 50,
+      "rentCost": 500,
+      "maxSlot": 5,
+      "rentType": "hours",
+      "freePresent": "Massage"
+    },
+    {
+      "id": 2,
+      "name": "Phong 2",
+      "area": 45,
+      "rentCost": 600,
+      "maxSlot": 6,
+      "rentType": "hours",
+      "freePresent": "Massage"
+    },
+    {
+      "id": 3,
+      "name": "Phong 3",
+      "area": 55,
+      "rentCost": 700,
+      "maxSlot": 7,
+      "rentType": "hours",
+      "freePresent": "Massage"
+    },
+    {
+      "id": 4,
+      "name": "Phong 4",
+      "area": 60,
+      "rentCost": 800,
+      "maxSlot": 8,
+      "rentType": "days",
+      "freePresent": "Massage"
+    },
+    {
+      "id": 5,
+      "name": "Phong 5",
+      "area": 70,
+      "rentCost": 900,
+      "maxSlot": 9,
+      "rentType": "days",
+      "freePresent": "Massage"
+    },
+    {
+      "id": 6,
+      "name": "Phong 6",
+      "area": 80,
+      "rentCost": 1000,
+      "maxSlot": 10,
+      "rentType": "days",
+      "freePresent": "Massage"
+    }
+  ],
+  "villas": [
+    {
+      "id": 1,
+      "name": "Villa 1",
+      "area": 600,
+      "rentCost": 3000,
+      "maxSlot": 10,
+      "rentType": "days",
+      "roomType": "Phong tieu chuan quoc te",
+      "description": "Chuyen doi ta",
+      "poolArea": 100,
+      "floors": 3
+    },
+    {
+      "id": 2,
+      "name": "Villa 2",
+      "area": 700,
+      "rentCost": 3200,
+      "maxSlot": 12,
+      "rentType": "days",
+      "roomType": "Phong tieu chuan quoc te",
+      "description": "Cot song em on hong",
+      "poolArea": 110,
+      "floors": 4
+    },
+    {
+      "id": 3,
+      "name": "Villa 3",
+      "area": 800,
+      "rentCost": 3300,
+      "maxSlot": 12,
+      "rentType": "days",
+      "roomType": "Phong tieu chuan quoc te",
+      "description": "Khong thay ngay ve",
+      "poolArea": 110,
+      "floors": 5
+    },
+    {
+      "id": 4,
+      "name": "Villa 4",
+      "area": 900,
+      "rentCost": 3333,
+      "maxSlot": 14,
+      "rentType": "days",
+      "roomType": "Phong tieu chuan quoc te",
+      "description": "Nuoc mat em lau bang tinh yeu moi",
+      "poolArea": 120,
+      "floors": 5
+    },
+    {
+      "id": 5,
+      "name": "Villa 5",
+      "area": 900,
+      "rentCost": 3500,
+      "maxSlot": 14,
+      "rentType": "days",
+      "roomType": "Phong tieu chuan quoc te",
+      "description": "Tu choi nhe nhang thui",
+      "poolArea": 140,
+      "floors": 5
+    },
+    {
+      "id": 6,
+      "name": "Villa 6",
+      "area": 1000,
+      "rentCost": 3700,
+      "maxSlot": 15,
+      "rentType": "days",
+      "roomType": "Phong tieu chuan quoc te",
+      "description": "Co khong giu mat dung tim",
+      "poolArea": 200,
+      "floors": 5
+    },
+    {
+      "name": "123",
+      "area": 123,
+      "rentCost": 999,
+      "maxSlot": 4545,
+      "rentType": "5454",
+      "roomType": "54545",
+      "description": "54545",
+      "poolArea": 0,
+      "floors": 123,
+      "id": 7
     }
   ]
 }

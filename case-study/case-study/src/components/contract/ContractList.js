@@ -2,6 +2,7 @@ import * as contractService from "../../service/contractService";
 import React, {useEffect, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import {DeleteContractModal} from "./DeleteContractModal";
+import {getParsedDate} from "../../utilities/getParseDay";
 
 export function ContractList() {
     const [showModal, setShowModal] = useState(false);
@@ -76,8 +77,8 @@ export function ContractList() {
                                 <tr key={contract.id}>
                                     <td>{index + 1}</td>
                                     <td>{contract.name}</td>
-                                    <td>{contract.startDate}</td>
-                                    <td>{contract.endDate}</td>
+                                    <td>{getParsedDate(contract.startDate)}</td>
+                                    <td>{getParsedDate(contract.endDate)}</td>
                                     <td>{contract.deposit}</td>
                                     <td>{contract.totalPay}</td>
                                     <td style={{textAlign: "center"}}>

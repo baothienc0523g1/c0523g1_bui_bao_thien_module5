@@ -10,6 +10,25 @@ export function EditCustomerForm() {
     const {customerId} = useParams();
     const [existedCustomer, setExistedCustomer] = useState();
 
+    const [genders, setGenders] = useState();
+    const [customerTypes, setCustomerTypes] = useState();
+
+    const getGender = async () => {
+        let genderList = await customerService.getGender();
+        await setGenders(genderList);
+    }
+
+    const getCustomerType = async () => {
+        let typeList = await customerService.getCustomerType();
+        await setCustomerTypes(typeList);
+    }
+
+    useEffect(() => {
+        getGender();
+        getCustomerType();
+    }, [])
+
+
     useEffect(() => {
         console.log("mount: " + existedCustomer)
         getEditCustomer();
@@ -26,25 +45,28 @@ export function EditCustomerForm() {
         }
     }
 
+    const requiredStr = "Please fill this field!"
+    const toDay = new Date();
+    const eightTeenYearsOldRequirement = new Date(toDay);
+    eightTeenYearsOldRequirement.setFullYear(toDay.getFullYear() - 18);
+
     const myValidator = {
         name: yup.string()
             .matches(/^[A-Za-z ]*$/, "Wrong name format!")
-            .required(),
-        address: yup.string().required(),
-        birthDay: yup.string()
-            .matches(/^\d{4}\-\d{2}\-\d{2}$/, "Wrong birthday format!")
-            .required(),
+            .required(requiredStr),
+        birthDay: yup.date()
+            .max(eightTeenYearsOldRequirement, "Kiddo, you're too young to do this")
+            .required(requiredStr),
+        address: yup.string().required(requiredStr),
         email: yup.string()
             .matches(/^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/, "Invalid email!")
-            .required(),
+            .required(requiredStr),
         phoneNumber: yup.string()
-            .matches(/^090\d{7}$|^091\d{7}$|^\(84\)(90\d{7})$|^\(84\)(91\d{7})$/, "Invalid phone number format!!")
-            .required(),
+            .matches(/^090\d{7}$|^091\d{7}$|^\+\(84\)(90\d{7})$|^\+\(84\)(91\d{7})$|^\(84\)(91\d{7})$|^\(84\)(90\d{7})$/, "Invalid phone number format!!")
+            .required(requiredStr),
         identity: yup.string()
-            .matches(/^\d{9}(\d{3})?$/, "Invalid identity format, put 9 to 12 numbers into this field!!")
-            .required(),
-        gender: yup.string().required(),
-        customerType: yup.string().required(),
+            .matches(/^\d{9}(\d{3})?$/, "Invalid identity format, put 9 or 12 numbers into this field!!")
+            .required(requiredStr),
     };
 
     const handleEdit = async (value) => {
@@ -57,25 +79,12 @@ export function EditCustomerForm() {
         }
     }
 
-    const customerType = [
-        {typeValue: 1, typeName: "Member"},
-        {typeValue: 2, typeName: "Silver"},
-        {typeValue: 3, typeName: "Gold"},
-        {typeValue: 4, typeName: "Platinum"},
-        {typeValue: 5, typeName: "Diamond"}
-    ];
-
-    const gender = [
-        {genderValue: 1, genderName: "Male"},
-        {genderValue: 2, genderName: "Female"},
-        {genderValue: 3, genderName: "Other"},
-    ];
 
     const cancelEdit = () => {
         navigate("/customers");
     }
 
-    if (!existedCustomer) {
+    if (!existedCustomer || !customerTypes || !genders) {
         console.log("render() null -> customer is undefined");
         return null
     } else {
@@ -105,8 +114,16 @@ export function EditCustomerForm() {
                             <div className="mb-2">
                                 <label htmlFor="customerType" className="form-label">Customer type </label>
                                 <Field as="select" name="customerType" id="customerType" className="form-select" aria-label="Default select example">
-                                    <option disabled={true} defaultValue>Chose one</option>
-                                    {customerType.map(type => (<option value={type.typeValue} key={type.typeValue} label={type.typeName}/>))}
+                                    <option label={existedCustomer.customerType.typeName}
+                                            selected={true}
+                                            value={JSON.stringify(existedCustomer.customerType)}
+                                            key={existedCustomer.customerType.id}
+                                    ></option>
+                                    {customerTypes.map((type) => {
+                                        if (type.typeName !== existedCustomer.customerType.typeName) {
+                                            return (<option value={JSON.stringify(type)} key={type.id} label={type.typeName}/>)
+                                        }
+                                    })}
                                 </Field>
                                 <ErrorMessage name="customerType" component="div" className="form-err-msg"/>
                             </div>
@@ -120,8 +137,16 @@ export function EditCustomerForm() {
                                 <div className="col-lg-6 col-mg-6">
                                     <label htmlFor="gender" className="form-label">Gender</label>
                                     <Field as="select" name="gender" id="gender" className="form-select" aria-label="Default select example">
-                                        <option disabled={true} defaultValue>Chose one</option>
-                                        {gender.map(g => (<option value={g.genderName} key={g.genderValue} label={g.genderName}/>))}
+                                        <option selected={true}
+                                        value={JSON.stringify(existedCustomer.gender)}
+                                        label={existedCustomer.gender.genderName}
+                                        key={existedCustomer.gender.id}
+                                        ></option>
+                                        {genders.map((gender) => {
+                                            if (gender.genderName !== existedCustomer.gender.genderName) {
+                                                return(<option value={JSON.stringify(gender)} key={gender.id} label={gender.genderName}/>)}
+                                            })
+                                        }
                                     </Field>
                                     <ErrorMessage name="gender" component="div" className="form-err-msg"/>
                                 </div>

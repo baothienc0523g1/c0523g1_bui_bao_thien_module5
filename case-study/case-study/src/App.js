@@ -8,13 +8,14 @@ import {EmployeeList} from "./components/employee/EmployeeList";
 import {DeleteModal} from "./components/core/DeleteModal";
 import {Route, Routes} from "react-router-dom";
 import {ContractList} from "./components/contract/ContractList";
-import {FacilitiesList} from "./components/facility/FacilitiesList";
 import {MainPageBody} from "./components/core/MainPageBody";
 import {AddCustomerForm} from "./components/customer/AddCustomerForm";
 import {EditCustomerForm} from "./components/customer/EditCustomerForm";
 import {AddContractForm} from "./components/contract/AddContractForm";
 import {EditContractForm} from "./components/contract/EditContractForm";
 import {MyNavBar} from "./components/core/MyNavBar";
+import {FacilitiesTable} from "./components/facility/FacilitiesTable";
+import {AddVillaForm} from "./components/facility/villa/AddVillaForm";
 
 function App() {
     return (
@@ -24,13 +25,18 @@ function App() {
             <Routes>
                 <Route path="/" element={<MainPageBody/>}/>
                 <Route path="/employees" element={<EmployeeList/>}></Route>
-                <Route path="/facilites" element={<FacilitiesList/>}></Route>
+                <Route path="/facilities" element={<FacilitiesTable/>}></Route>
+
                 <Route path="/contracts" element={<ContractList/>}></Route>
                 <Route path="/contracts/add/" element={<AddContractForm/>}></Route>
                 <Route path="/contracts/edit/:contractId" element={<EditContractForm/>}></Route>
+
                 <Route path="/customers" element={<CustomerList/>}></Route>
                 <Route path="/customers/add" element={<AddCustomerForm/>}></Route>
                 <Route path="/customers/edit/:customerId" element={<EditCustomerForm/>}></Route>
+
+                <Route path="/villa/add" element={<AddVillaForm/>}></Route>
+
             </Routes>
             <ScrollToTopBtn/>
             <InfoModal/>
