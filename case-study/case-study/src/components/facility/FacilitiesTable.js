@@ -54,6 +54,9 @@ export function FacilitiesTable() {
         setRoomObjForDelete(value);
     }
 
+    const handleCreateRoom = () => {
+        navigate("/rooms/add")
+    }
     /*villa handle*/
     const [villaModalShow, setVillaModalShow] = useState(false);
     const [villaObjForDelete, setVillaObjForDelete] = useState();
@@ -91,6 +94,7 @@ export function FacilitiesTable() {
     const handleChangeType = (type) => {
         setTypeOfList(type)
     }
+
     function resetKeyword() {
         setKeyword("");
     }
@@ -128,6 +132,13 @@ export function FacilitiesTable() {
                         {typeOfList === 'rooms' && <>
                             <h1 className="management-title">Room List</h1>
                             <div className="container">
+                                <button className="sign-in-btn" onClick={handleCreateRoom}>Create new room</button>
+                                <button className="btn btn-outline-info float-lg-end" onClick={resetKeyword}>Reset
+                                </button>
+                                <input type="text" className="input-group-text float-lg-end"
+                                       value={keyword}
+                                       onChange={(keyword => setKeyword(keyword.target.value))}
+                                       placeholder={"Search with name"}/>
                                 <table className="table table-striped mt-2" id="customer-table">
                                     <thead>
                                     <tr>
@@ -154,8 +165,9 @@ export function FacilitiesTable() {
                                                     <td>{room.rentType}</td>
                                                     <td>{room.freePresent}</td>
                                                     <td style={{textAlign: "center"}}>
-                                                        <Link to={`/rooms/edit/${room.id}`}></Link>
-                                                        <i className="fas fa-edit fa-lg"></i>
+                                                        <Link to={`/rooms/edit/${room.id}`}>
+                                                            <i className="fas fa-edit fa-lg"></i>
+                                                        </Link>
                                                     </td>
                                                     <td style={{textAlign: "center"}}><a
                                                         type="button"
@@ -169,9 +181,9 @@ export function FacilitiesTable() {
                                     </tbody>
                                 </table>
                                 <DeleteRoomModal
-                                show={roomModalShow}
-                                obj={roomObjForDelete}
-                                handleCloseFn={handleCloseRoomModal}/>
+                                    show={roomModalShow}
+                                    obj={roomObjForDelete}
+                                    handleCloseFn={handleCloseRoomModal}/>
                             </div>
                         </>}
                         {typeOfList === 'houses' && <>

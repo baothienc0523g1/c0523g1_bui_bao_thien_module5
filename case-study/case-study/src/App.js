@@ -20,6 +20,8 @@ import {EditVillaForm} from "./components/facility/villa/EditVillaForm";
 import {Error} from "./components/core/Error";
 import {AddHouseForm} from "./components/facility/house/AddHouseForm";
 import {EditHouseForm} from "./components/facility/house/EditHouseForm";
+import {EditRoomForm} from "./components/facility/room/EditRoomForm";
+import {AddRoomForm} from "./components/facility/room/AddRoomForm";
 
 function App() {
     return (
@@ -38,6 +40,9 @@ function App() {
                 <Route path="/customers" element={<CustomerList/>}/>
                 <Route path="/customers/add" element={<AddCustomerForm/>}/>
                 <Route path="/customers/edit/:customerId" element={<EditCustomerForm/>}/>
+
+                <Route path="/rooms/add" element={<AddRoomForm/>}/>
+                <Route path="/rooms/edit/:roomId" element={<EditRoomForm/>}/>
 
                 <Route path="/houses/add" element={<AddHouseForm/>}/>
                 <Route path="/houses/edit/:houseId" element={<EditHouseForm/>}/>
