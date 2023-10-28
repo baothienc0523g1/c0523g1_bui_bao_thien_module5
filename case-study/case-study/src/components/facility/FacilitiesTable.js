@@ -5,13 +5,14 @@ import {getHouseList} from "../../service/facilities/houseService";
 import {Link, useNavigate} from "react-router-dom";
 import {DeleteVillaModal} from "./villa/DeleteVillaModal";
 import {DeleteHouseModal} from "./house/DeleteHouseModal";
+import {DeleteRoomModal} from "./room/DeleteRoomModal";
 
 export function FacilitiesTable() {
     /*init*/
     const [roomList, setRoomList] = useState();
     const [houseList, setHouseList] = useState();
     const [villaList, setVillaList] = useState();
-    const [keyword, setKeyword] = useState();
+    const [keyword, setKeyword] = useState("");
     const navigate = useNavigate();
 
     const listOfType = ["rooms", "houses", "villas"];
@@ -40,10 +41,22 @@ export function FacilitiesTable() {
         getAllFacilities(keyword)
     }, [keyword])
 
+    /*room handle*/
+    const [roomModalShow, setRoomModalShow] = useState(false);
+    const [roomObjForDelete, setRoomObjForDelete] = useState();
+    const handleCloseRoomModal = async () => {
+        setRoomModalShow(false);
+        setRoomObjForDelete(null);
+        await getRooms();
+    }
+    const handleShowRoomModal = (value) => {
+        setRoomModalShow(true);
+        setRoomObjForDelete(value);
+    }
+
     /*villa handle*/
     const [villaModalShow, setVillaModalShow] = useState(false);
     const [villaObjForDelete, setVillaObjForDelete] = useState();
-
     const handleShowVillaModal = (obj) => {
         setVillaModalShow(true);
         setVillaObjForDelete(obj);
@@ -53,7 +66,6 @@ export function FacilitiesTable() {
         setVillaObjForDelete(null);
         await getAllFacilities();
     }
-
     const handleCreateVilla = () => {
         navigate("/villas/add");
     }
@@ -69,17 +81,16 @@ export function FacilitiesTable() {
         setHouseObjForDelete(obj);
         setHouseModalShow(true);
     }
-
     const handleCloseHouseModal = () => {
         setHouseObjForDelete(null);
         setHouseModalShow(false);
         getAllFacilities()
     }
+
     /*handle table when type typeOfList change */
     const handleChangeType = (type) => {
         setTypeOfList(type)
     }
-
     function resetKeyword() {
         setKeyword("");
     }
@@ -88,6 +99,7 @@ export function FacilitiesTable() {
     if (!roomList || !houseList || !villaList) {
         return null;
     }
+
 
     return (
         <>
@@ -141,11 +153,13 @@ export function FacilitiesTable() {
                                                     <td>{room.maxSlot}</td>
                                                     <td>{room.rentType}</td>
                                                     <td>{room.freePresent}</td>
-                                                    <td style={{textAlign: "center"}}><i
-                                                        className="fas fa-edit fa-lg"></i>
+                                                    <td style={{textAlign: "center"}}>
+                                                        <Link to={`/rooms/edit/${room.id}`}></Link>
+                                                        <i className="fas fa-edit fa-lg"></i>
                                                     </td>
                                                     <td style={{textAlign: "center"}}><a
-                                                        type="button"><i
+                                                        type="button"
+                                                        onClick={() => handleShowRoomModal(room)}><i
                                                         className="fas fa-trash fa-lg"
                                                         style={{color: "red"}}></i></a></td>
                                                 </tr>
@@ -154,6 +168,10 @@ export function FacilitiesTable() {
                                     }
                                     </tbody>
                                 </table>
+                                <DeleteRoomModal
+                                show={roomModalShow}
+                                obj={roomObjForDelete}
+                                handleCloseFn={handleCloseRoomModal}/>
                             </div>
                         </>}
                         {typeOfList === 'houses' && <>

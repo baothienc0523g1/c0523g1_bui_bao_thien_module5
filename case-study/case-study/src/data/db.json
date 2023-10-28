@@ -260,7 +260,7 @@
   "houses": [
     {
       "id": 1,
-      "name": "Nha 1",
+      "name": "House 1",
       "area": 200,
       "rentCost": 2000,
       "maxSlot": 8,
@@ -271,7 +271,7 @@
     },
     {
       "id": 2,
-      "name": "Nha 2",
+      "name": "House 2",
       "area": 250,
       "rentCost": 2100,
       "maxSlot": 8,
@@ -282,7 +282,7 @@
     },
     {
       "id": 3,
-      "name": "Nha 3",
+      "name": "House 3",
       "area": 300,
       "rentCost": 2200,
       "maxSlot": 9,
@@ -293,7 +293,7 @@
     },
     {
       "id": 4,
-      "name": "Nha 4",
+      "name": "House 4",
       "area": 400,
       "rentCost": 2400,
       "maxSlot": 10,
@@ -304,7 +304,7 @@
     },
     {
       "id": 5,
-      "name": "Nha 5",
+      "name": "House 5",
       "area": 500,
       "rentCost": 2500,
       "maxSlot": 12,
@@ -315,7 +315,7 @@
     },
     {
       "id": 6,
-      "name": "Nha 6",
+      "name": "House 6",
       "area": 700,
       "rentCost": 3000,
       "maxSlot": 15,
@@ -328,7 +328,7 @@
   "rooms": [
     {
       "id": 1,
-      "name": "Phong 1",
+      "name": "Room 1",
       "area": 50,
       "rentCost": 500,
       "maxSlot": 5,
@@ -337,7 +337,7 @@
     },
     {
       "id": 2,
-      "name": "Phong 2",
+      "name": "Room 2",
       "area": 45,
       "rentCost": 600,
       "maxSlot": 6,
@@ -346,7 +346,7 @@
     },
     {
       "id": 3,
-      "name": "Phong 3",
+      "name": "Room 3",
       "area": 55,
       "rentCost": 700,
       "maxSlot": 7,
@@ -355,7 +355,7 @@
     },
     {
       "id": 4,
-      "name": "Phong 4",
+      "name": "Room 4",
       "area": 60,
       "rentCost": 800,
       "maxSlot": 8,
@@ -364,7 +364,7 @@
     },
     {
       "id": 5,
-      "name": "Phong 5",
+      "name": "Room 5",
       "area": 70,
       "rentCost": 900,
       "maxSlot": 9,
@@ -373,7 +373,7 @@
     },
     {
       "id": 6,
-      "name": "Phong 6",
+      "name": "Room 6",
       "area": 80,
       "rentCost": 1000,
       "maxSlot": 10,
@@ -389,7 +389,7 @@
       "rentCost": 3000,
       "maxSlot": 10,
       "rentType": "days",
-      "roomType": "Phong tieu chuan quoc te",
+      "roomType": "Room tieu chuan quoc te",
       "description": "Chuyen doi ta",
       "poolArea": 100,
       "floors": 34
@@ -401,7 +401,7 @@
       "rentCost": 3200,
       "maxSlot": 12,
       "rentType": "days",
-      "roomType": "Phong tieu chuan quoc te",
+      "roomType": "Room tieu chuan quoc te",
       "description": "Cot song em on hong",
       "poolArea": 110,
       "floors": 4
@@ -413,7 +413,7 @@
       "rentCost": 3300,
       "maxSlot": 12,
       "rentType": "days",
-      "roomType": "Phong tieu chuan quoc te",
+      "roomType": "Room tieu chuan quoc te",
       "description": "Khong thay ngay ve",
       "poolArea": 110,
       "floors": 5
@@ -425,7 +425,7 @@
       "rentCost": 3333,
       "maxSlot": 14,
       "rentType": "days",
-      "roomType": "Phong tieu chuan quoc te",
+      "roomType": "Room tieu chuan quoc te",
       "description": "Nuoc mat em lau bang tinh yeu moi",
       "poolArea": 120,
       "floors": 5
@@ -437,7 +437,7 @@
       "rentCost": 3500,
       "maxSlot": 14,
       "rentType": "days",
-      "roomType": "Phong tieu chuan quoc te",
+      "roomType": "Room tieu chuan quoc te",
       "description": "Tu choi nhe nhang thui",
       "poolArea": 140,
       "floors": 5
@@ -449,7 +449,7 @@
       "rentCost": 3700,
       "maxSlot": 15,
       "rentType": "days",
-      "roomType": "Phong tieu chuan quoc te",
+      "roomType": "Room tieu chuan quoc te",
       "description": "Co khong giu mat dung tim",
       "poolArea": 200,
       "floors": 5

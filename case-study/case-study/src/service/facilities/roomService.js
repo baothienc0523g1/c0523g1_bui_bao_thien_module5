@@ -15,7 +15,7 @@ const getRoomList = async () => {
 
 const add = async (value) => {
     try {
-        let response = await axios.post(POST_URL + `villas`, value)
+        let response = await axios.post(POST_URL + `rooms`, value)
         return response.status;
     } catch (err) {
         console.log("Error while get facilities list: " + err);
@@ -25,7 +25,7 @@ const add = async (value) => {
 
 const findById = async (id) => {
     try {
-        return (await axios.get(GET_FACILITY_URL + "villas/" + id)).data;
+        return (await axios.get(GET_FACILITY_URL + "rooms/" + id)).data;
     } catch (err) {
         console.log("Error while get facility: " + err);
         throw err;
@@ -34,7 +34,7 @@ const findById = async (id) => {
 
 const edit = async (value) => {
     try {
-        let response = await axios.put(GET_FACILITY_URL + "villas/" + value.id, value)
+        let response = await axios.put(GET_FACILITY_URL + "rooms/" + value.id, value)
         return response.status;
     } catch (err) {
         console.log("Error while get facilities list: " + err);
@@ -44,7 +44,7 @@ const edit = async (value) => {
 
 const remove = async (value) => {
     try {
-        let response = await axios.delete(GET_FACILITY_URL + "villas/" + value.id);
+        let response = await axios.delete(GET_FACILITY_URL + "rooms/" + value.id);
         return response.status;
     } catch (err) {
         console.log("Error while get facilities list: " + err);

@@ -29,7 +29,7 @@ export function DeleteVillaModal(villa) {
                                         onClick={handleCloseFn}></button>
                             </div>
                             <div className="modal-body">
-                                <p>Are sure about remove customer with name: {obj.name}?</p>
+                                <p>Are sure about remove villa with name: {obj.name}?</p>
                                 <p style={{color: "red"}}>Warning: This action cant be un-done!</p>
                             </div>
                             <div className="modal-footer">
