@@ -1,0 +1,55 @@
+{
+  "sanPham": [
+    {
+      "id": 1,
+      "ma": "NH-01",
+      "ten": "Ca rot",
+      "donVi": "Cu",
+      "gia": 8000,
+      "loaiHang": {
+        "id": 2,
+        "ten": "Cu"
+      },
+      "ngayThuHoach": "2022-01-01"
+    },
+    {
+      "id": 2,
+      "ma": "NH-02",
+      "ten": "Xa lack",
+      "donVi": "Rau",
+      "gia": 8000,
+      "loaiHang": {
+        "id": 1,
+        "ten": "Rau"
+      },
+      "ngayThuHoach": "2022-01-01"
+    },
+    {
+      "ma": "asd",
+      "ten": "asd",
+      "don_vi": "",
+      "gia": 124,
+      "loaiHang": {
+        "id": 1,
+        "ten": "Rau"
+      },
+      "ngayThuHoach": "3123-12-12",
+      "donVi": "Bao",
+      "id": 4
+    }
+  ],
+  "loaiHang": [
+    {
+      "id": 1,
+      "ten": "Rau"
+    },
+    {
+      "id": 2,
+      "ten": "Cu"
+    },
+    {
+      "id": 3,
+      "ten": "Qua"
+    }
+  ]
+}
