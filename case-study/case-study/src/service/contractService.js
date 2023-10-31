@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const GET_URL = "http://localhost:8080/contracts";
-const GET_BY_ID_URL = "http://localhost:8080/contracts/";
-const POST_URL = "http://localhost:8080/contracts/";
-const PATCH_URL = "http://localhost:8080/contracts/";
-const DELETE_URL = "http://localhost:8080/contracts/";
+const GET_URL = "http://localhost:8081/contracts";
+const GET_BY_ID_URL = "http://localhost:8081/contracts/";
+const POST_URL = "http://localhost:8081/contracts/";
+const PATCH_URL = "http://localhost:8081/contracts/";
+const DELETE_URL = "http://localhost:8081/contracts/";
 
 const findAll = async (keyword) => {
     try {

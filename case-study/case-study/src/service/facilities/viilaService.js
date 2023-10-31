@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const GET_FACILITY_URL = "http://localhost:8080/";
-const POST_URL = "http://localhost:8080/";
+const GET_FACILITY_URL = "http://localhost:8081/";
+const POST_URL = "http://localhost:8081/";
 const getVillaList = async (keyword) => {
     try {
         let response = await axios.get(GET_FACILITY_URL + `villas?name_like=${keyword}`)

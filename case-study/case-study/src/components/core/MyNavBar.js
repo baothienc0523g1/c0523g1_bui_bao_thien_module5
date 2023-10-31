@@ -21,9 +21,9 @@ export function MyNavBar() {
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/customers">Customer</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link" to="/employees">Employee</NavLink>
-                            </li>
+                            {/*<li className="nav-item">*/}
+                            {/*    <NavLink className="nav-link" to="/employees">Employee</NavLink>*/}
+                            {/*</li>*/}
                             <li className="nav-item">
                                 <NavLink className="nav-link" to="/facilities">Facility</NavLink>
                             </li>

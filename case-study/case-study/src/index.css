@@ -247,10 +247,12 @@ table tr td {
 #chose-facility {
     margin-left: 1%;
 }
+
 /*error page*/
 #error-div {
     min-height: 400px;
 }
+
 #404-img {
     width: 100%;
     height: auto;

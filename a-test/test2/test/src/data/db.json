@@ -1,0 +1,66 @@
+{
+  "hangHoa": [
+    {
+      "id": 1,
+      "ma": "HH-1",
+      "ten": "Ca rot",
+      "donVi": "Kg",
+      "gia": 1000,
+      "ngayThuHoach": "2023-01-01",
+      "loaiHangHoa": {
+        "id": 2,
+        "ten": "Cu"
+      }
+    },
+    {
+      "id": 2,
+      "ma": "HH-2",
+      "ten": "Rau ram",
+      "donVi": "Bo",
+      "gia": 1000,
+      "ngayThuHoach": "2023-01-01",
+      "loaiHangHoa": {
+        "id": 1,
+        "ten": "Rau"
+      }
+    },
+    {
+      "id": 3,
+      "ma": "HH-3",
+      "ten": "Cam",
+      "donVi": "Kg",
+      "gia": 1000,
+      "ngayThuHoach": "2023-01-01",
+      "loaiHangHoa": {
+        "id": 3,
+        "ten": "Qua"
+      }
+    },
+    {
+      "ma": "123",
+      "ten": "123",
+      "donVi": "Rau",
+      "gia": 123,
+      "ngayThuHoach": "3212-02-11",
+      "loaiHangHoa": {
+        "id": 1,
+        "ten": "Rau"
+      },
+      "id": 12
+    }
+  ],
+  "loaiHangHoa": [
+    {
+      "id": 1,
+      "ten": "Rau"
+    },
+    {
+      "id": 2,
+      "ten": "Cu"
+    },
+    {
+      "id": 3,
+      "ten": "Qua"
+    }
+  ]
+}

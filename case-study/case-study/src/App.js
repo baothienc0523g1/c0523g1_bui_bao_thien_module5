@@ -3,14 +3,11 @@ import Header from "./components/core/Header";
 import ScrollToTopBtn from "./components/core/ScrollToTopBtn";
 import InfoModal from "./components/core/InfoModal";
 import Footer from "./components/core/Footer";
-import CustomerList from "./components/customer/CustomerList";
-import {EmployeeList} from "./components/employee/EmployeeList";
 import {DeleteModal} from "./components/core/DeleteModal";
 import {Route, Routes} from "react-router-dom";
 import {ContractList} from "./components/contract/ContractList";
 import {MainPageBody} from "./components/core/MainPageBody";
-import {AddCustomerForm} from "./components/customer/AddCustomerForm";
-import {EditCustomerForm} from "./components/customer/EditCustomerForm";
+
 import {AddContractForm} from "./components/contract/AddContractForm";
 import {EditContractForm} from "./components/contract/EditContractForm";
 import {MyNavBar} from "./components/core/MyNavBar";
@@ -22,6 +19,9 @@ import {AddHouseForm} from "./components/facility/house/AddHouseForm";
 import {EditHouseForm} from "./components/facility/house/EditHouseForm";
 import {EditRoomForm} from "./components/facility/room/EditRoomForm";
 import {AddRoomForm} from "./components/facility/room/AddRoomForm";
+import CustomerListTestWithAPI from "./components/customer/CustomerListTestWithAPI";
+import {AddCustomerFormWithAPI} from "./components/customer/AddCustomerFormWithAPI";
+import {EditCustomerFormWithAPI} from "./components/customer/EditCustomerFormWithAPI";
 
 function App() {
     return (
@@ -30,16 +30,15 @@ function App() {
             <MyNavBar/>
             <Routes>
                 <Route path="/" element={<MainPageBody/>}/>
-                <Route path="/employees" element={<EmployeeList/>}/>
                 <Route path="/facilities" element={<FacilitiesTable/>}/>
 
                 <Route path="/contracts" element={<ContractList/>}/>
                 <Route path="/contracts/add/" element={<AddContractForm/>}/>
                 <Route path="/contracts/edit/:contractId" element={<EditContractForm/>}/>
 
-                <Route path="/customers" element={<CustomerList/>}/>
-                <Route path="/customers/add" element={<AddCustomerForm/>}/>
-                <Route path="/customers/edit/:customerId" element={<EditCustomerForm/>}/>
+                <Route path="/customers" element={<CustomerListTestWithAPI/>}/>
+                <Route path="/customers/add" element={<AddCustomerFormWithAPI/>}/>
+                <Route path="/customers/edit/:customerId" element={<EditCustomerFormWithAPI/>}/>
 
                 <Route path="/rooms/add" element={<AddRoomForm/>}/>
                 <Route path="/rooms/edit/:roomId" element={<EditRoomForm/>}/>
